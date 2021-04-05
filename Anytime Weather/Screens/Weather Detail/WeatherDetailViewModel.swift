@@ -32,7 +32,7 @@ extension WeatherDetailViewModel {
     var lastUpdated: String {
         let now = Date()
         let formatter = DateFormatter()
-        formatter.setLocalizedDateFormatFromTemplate("HH:mm")
+        formatter.setLocalizedDateFormatFromTemplate("HH.mm")
         let data_HHmm = formatter.string(from: now)
         return "Last updated: \(data_HHmm)"
     }

@@ -10,6 +10,7 @@ import SwiftUI
 struct WeatherDetailView: View {
     
     @ObservedObject var vm = WeatherDetailViewModel()
+    @State var isLoading = false
     
     init(city: String) {
         vm.city = city
@@ -64,13 +65,19 @@ struct WeatherDetailView: View {
                 }) {
                     HStack {
                         
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+//                        ProgressView(value: 100, total: 100)
+//                            .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+//                            .animation(.none)
+                        
+                        Image(systemName: "arrow.triangle.2.circlepath")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(.white)
+                            .frame(width: 13, height: 13)
                         
                         Text(vm.lastUpdated)
                             .font(.caption)
                             .foregroundColor(.white)
-                            .padding()
                         
                     }
                 }
