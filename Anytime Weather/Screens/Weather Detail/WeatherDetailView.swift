@@ -15,7 +15,6 @@ struct WeatherDetailView: View {
         
         ZStack {
             
-            
             Color.color6.edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .center) {
