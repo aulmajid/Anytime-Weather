@@ -45,8 +45,8 @@ struct ContentView: View {
                     .cornerRadius(3.0)
                     
                     let isHistory = self.city.isEmpty
-                    ForEach(isHistory ? self.history : self.searchSuffix, id: \.self) { city in
-                        CityCell(city: city, isHistory: isHistory)
+                    ForEach(isHistory ? self.history : self.searchSuffix, id: \.self) { keyword in
+                        KeywordCell(keyword: keyword, isHistory: isHistory)
                     }
                     .cornerRadius(3.0)
                     .listRowBackground(Color.clear)
@@ -63,9 +63,9 @@ struct ContentView: View {
     
 }
 
-struct CityCell: View {
+struct KeywordCell: View {
     
-    var city: String
+    var keyword: String
     var isHistory: Bool
     
     var body: some View {
@@ -81,7 +81,7 @@ struct CityCell: View {
                 
                 Spacer().frame(width: 20)
                 
-                Text(self.city)
+                Text(self.keyword)
                     .foregroundColor(.white)
                     .font(.body)
                     .frame(height: 15)
