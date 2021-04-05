@@ -22,7 +22,7 @@ struct ContentView: View {
             
             ZStack {
                 
-                Color.color6.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                Color.color6.edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     
@@ -39,18 +39,42 @@ struct ContentView: View {
                         
                     }
                     .background(Color.white)
-                    .cornerRadius(4)
+                    .cornerRadius(3.0)
+                    .padding()
                     
-                    List(0...5, id: \.self) { city in
-                        Text("\(city)")
+                    ForEach(0...5, id: \.self) { city in
+                        let a = "\(city) hahaha"
+                        CityCell(city: a)
                     }
+                    .cornerRadius(3.0)
+                    .listRowBackground(Color.clear)
                     
                     Spacer()
                     
-                }.padding()
+                }
                 .navigationBarTitle("Anytime Weather")
             }
         }
+        
+    }
+    
+}
+
+struct CityCell: View {
+    
+    var city: String
+    
+    var body: some View {
+        
+        HStack {
+            
+            Text(self.city)
+            
+            Spacer()
+            
+        }
+        .background(Color.white)
+        .padding()
         
     }
     
