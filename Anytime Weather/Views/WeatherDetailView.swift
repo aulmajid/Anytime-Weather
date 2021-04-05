@@ -14,31 +14,36 @@ struct WeatherDetailView: View {
     var body: some View {
         
         ZStack {
-    
             
-            Color.clear.edgesIgnoringSafeArea(.all)
-        
-        VStack(alignment: .center) {
+            
+            Color.color6.edgesIgnoringSafeArea(.all)
+            
             VStack(alignment: .center) {
                 
                 Text("Surabaya")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .foregroundColor(.white)
                 
                 Text("April 5, 2021")
                     .font(.title)
+                    .foregroundColor(.white)
                 
                 Image(systemName: "cloud.fill")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 100)
+                    .foregroundColor(.white)
                 
                 Text("Clouds")
+                    .foregroundColor(.white)
                 
                 Text("23°F")
                     .font(.system(size: 130))
+                    .foregroundColor(.white)
                 
                 Text("Feels like 23°F")
+                    .foregroundColor(.white)
                 
                 Text("Min :\t\t\t23°F\n" +
                         "Max :\t\t23°F\n" +
@@ -46,14 +51,17 @@ struct WeatherDetailView: View {
                         "Humidity :\t55")
                     .font(.caption)
                     .multilineTextAlignment(.leading)
+                    .foregroundColor(.white)
+                    .padding()
+                
+                Spacer()
+                
+                Text("Forecast")
+                    .foregroundColor(.white)
                     .padding()
                 
             }
             
-            Text("Forecast")
-            
-        }
-        .background(Color.red)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         
