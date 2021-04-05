@@ -24,27 +24,27 @@ class WeatherDetailViewModel: ObservableObject {
 //    }
     
     var temp: String {
-        ""
+        "\(Int(weather.main?.temp ?? 0))"
     }
     
     var maxTemp: String {
-        ""
+        "\(Int(weather.main?.temp_max ?? 0))"
     }
     
     var minTemp: String {
-        ""
+        "\(Int(weather.main?.temp_min ?? 0))"
     }
     
     var feelsLike: String {
-        ""
+        "\(Int(weather.main?.feels_like ?? 0))"
     }
     
     var pressure: String {
-        ""
+        "\(weather.main?.pressure ?? 0)"
     }
     
     var humidity: String {
-        ""
+        "\(weather.main?.humidity ?? 0)"
     }
     
 }

@@ -41,17 +41,17 @@ struct WeatherDetailView: View {
                 Text("Clouds")
                     .foregroundColor(.white)
                 
-                Text("\(self.vm.weather.main?.temp ?? 0)")
+                Text(vm.temp)
                     .font(.system(size: 130))
                     .foregroundColor(.white)
                 
-                Text("Feels like 23°F")
+                Text("Feels like \(vm.feelsLike)")
                     .foregroundColor(.white)
                 
-                Text("Min :\t\t\t23°F\n" +
-                        "Max :\t\t23°F\n" +
-                        "Pressure :\t1000\n" +
-                        "Humidity :\t55")
+                Text("Min :\t\t\t\(vm.minTemp)\n" +
+                        "Max :\t\t\(vm.maxTemp)\n" +
+                        "Pressure :\t\(vm.pressure)\n" +
+                        "Humidity :\t\(vm.humidity)")
                     .font(.caption)
                     .multilineTextAlignment(.leading)
                     .foregroundColor(.white)
