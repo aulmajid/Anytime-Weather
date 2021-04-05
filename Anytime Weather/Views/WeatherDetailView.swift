@@ -17,8 +17,11 @@ struct WeatherDetailView: View {
             VStack(alignment: .center) {
                 
                 Text("Surabaya")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                 
                 Text("April 5, 2021")
+                    .font(.title)
                 
                 Image(systemName: "cloud.fill")
                     .resizable()
@@ -28,14 +31,15 @@ struct WeatherDetailView: View {
                 Text("Clouds")
                 
                 Text("23°F")
-                    .font(.system(size: 100))
+                    .font(.system(size: 130))
                 
                 Text("Feels like 23°F")
                 
-                Text("Min :\t\t23°F\n" +
+                Text("Min :\t\t\t23°F\n" +
                         "Max :\t\t23°F\n" +
                         "Pressure :\t1000\n" +
                         "Humidity :\t55")
+                    .font(.caption)
                     .multilineTextAlignment(.leading)
                     .padding()
                 
