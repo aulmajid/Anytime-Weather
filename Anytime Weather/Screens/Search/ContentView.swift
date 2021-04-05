@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var keyword = ""
     
     var history = ["Surabaya", "Jakarta", "Surakarta", "Bandung", "Semarang", "Yogyakarta", "Medan", "Batam"]
-    var searchSuffix = ["baya", "karta", "dung", "rang", "dan", "tam"]
+    var searchSuffix = ["", "baya", "karta", "dung", "rang", "dan", "tam"]
     
     init() {
         UITableView.appearance().backgroundColor = .clear
@@ -71,6 +71,8 @@ struct KeywordCell: View {
     
     var body: some View {
         
+        NavigationLink(destination: WeatherDetailView(city: keyword)) {
+        
         VStack(alignment: .center, spacing: 10) {
             
             HStack(alignment: .center) {
@@ -97,6 +99,8 @@ struct KeywordCell: View {
             Color.white.frame(height: 1)
             
         }.padding()
+            
+        }
         
     }
     

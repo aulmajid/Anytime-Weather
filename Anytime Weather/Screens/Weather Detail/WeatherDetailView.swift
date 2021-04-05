@@ -24,7 +24,7 @@ struct WeatherDetailView: View {
             
             VStack(alignment: .center) {
                 
-                Text("Surabaya")
+                Text(vm.city)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
