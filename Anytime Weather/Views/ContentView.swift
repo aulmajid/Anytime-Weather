@@ -11,6 +11,9 @@ struct ContentView: View {
     
     @State private var city = ""
     
+    var history = ["Surabaya", "Jakarta", "Surakarta", "Bandung", "Semarang", "Yogyakarta", "Medan", "Batam"]
+    var searchSuffix = ["baya", "karta", "dung", "rang", "dan", "tam"]
+    
     init() {
         UITableView.appearance().backgroundColor = .clear
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
@@ -41,9 +44,9 @@ struct ContentView: View {
                     .background(Color.white)
                     .cornerRadius(3.0)
                     
-                    ForEach(0...5, id: \.self) { city in
-                        let a = "\(self.city)"
-                        CityCell(city: a)
+                    let isHistory = self.city.isEmpty
+                    ForEach(isHistory ? self.history : self.searchSuffix, id: \.self) { city in
+                        CityCell(city: city, isHistory: isHistory)
                     }
                     .cornerRadius(3.0)
                     .listRowBackground(Color.clear)
@@ -63,6 +66,7 @@ struct ContentView: View {
 struct CityCell: View {
     
     var city: String
+    var isHistory: Bool
     
     var body: some View {
         
@@ -70,9 +74,8 @@ struct CityCell: View {
             
             HStack(alignment: .center) {
                 
-                Image(systemName: self.city.isEmpty ? "clock" : "magnifyingglass")
+                Image(systemName: self.isHistory ? "clock" : "magnifyingglass")
                     .resizable()
-                    .scaledToFit()
                     .foregroundColor(.white)
                     .frame(width: 15, height: 15, alignment: .center)
                 
@@ -81,6 +84,7 @@ struct CityCell: View {
                 Text(self.city)
                     .foregroundColor(.white)
                     .font(.body)
+                    .frame(height: 15)
                 
                 Spacer()
                 
