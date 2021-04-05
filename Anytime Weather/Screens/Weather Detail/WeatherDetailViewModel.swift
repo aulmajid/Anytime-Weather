@@ -7,11 +7,11 @@
 
 import Foundation
 
-class WeatherDetailViewModel {
+class WeatherDetailViewModel: ObservableObject {
     
-    var location: String {
-        ""
-    }
+    private let weatherService = WeatherService()
+    
+    var city: String = ""
     
     var date: String {
         ""
@@ -50,7 +50,7 @@ class WeatherDetailViewModel {
 extension WeatherDetailViewModel {
     
     func fetchWeather() {
-        
+        weatherService.getWeather(city: self.city)
     }
     
 }

@@ -9,7 +9,11 @@ import SwiftUI
 
 struct WeatherDetailView: View {
     
-    var city: String
+    @ObservedObject var vm = WeatherDetailViewModel()
+    
+    init(city: String) {
+        vm.city = city
+    }
     
     var body: some View {
         
@@ -63,6 +67,9 @@ struct WeatherDetailView: View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .onAppear(perform: {
+            vm.fetchWeather()
+        })
         
     }
     
