@@ -14,9 +14,21 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView() {
+            
             VStack {
                 
-                TextField("Enter city", text: self.$city)
+                HStack {
+                    
+                    TextField("Enter city", text: self.$city)
+                        .padding()
+                    
+                    Spacer()
+                    
+                    Button(action: {print("TAP") }) {
+                        Image(systemName: "chevron.forward.circle.fill")
+                    }.padding()
+                    
+                }.background(Color.green)
                 
                 List(0...5, id: \.self) { city in
                     Text("\(city)")
@@ -25,6 +37,7 @@ struct ContentView: View {
                 Spacer()
                 
             }.padding()
+            .background(Color.red)
             .navigationBarTitle("Anytime Weather")
         }
         
