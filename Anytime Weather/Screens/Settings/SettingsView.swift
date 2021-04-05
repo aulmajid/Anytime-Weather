@@ -19,7 +19,11 @@ struct SettingsView: View {
                 
                 ForEach(units, id: \.self) { unit in
                     
-                    UnitCell(unit: unit)
+                    Button(action: {
+                        self.selectedUnit = unit
+                    }) {
+                        UnitCell(unit: unit, isSelected: unit == self.selectedUnit)
+                    }
                     
                 }
                 
@@ -32,12 +36,9 @@ struct SettingsView: View {
 struct UnitCell: View {
     
     var unit: String
+    var isSelected: Bool
     
     var body: some View {
-        
-        Button(action: {
-            
-        }) {
             
             HStack {
                 
@@ -46,10 +47,9 @@ struct UnitCell: View {
                 Spacer()
                 
                 Image(systemName: "gearshape")
+                    .isHidden(!self.isSelected)
                 
             }
-            
-        }
         
     }
     
