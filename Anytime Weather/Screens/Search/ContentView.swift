@@ -57,20 +57,18 @@ struct ContentView: View {
                     Spacer()
                     
                 }
-                .navigationBarTitle("Anytime Weather")
-                .background(
-                    NavigationLink(destination: Text("Destination"), isActive: $settingsButtonActive) {}
-                )
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: {
-                            settingsButtonActive = true
-                        }) {
-                            Image(systemName: "gearshape")
-                        }
+                .padding()
+            }
+            .navigationBarTitle("Anytime Weather")
+            .background(NavigationLink(destination: Text("Destination"), isActive: $settingsButtonActive) {})
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        settingsButtonActive = true
+                    }) {
+                        Image(systemName: "gearshape")
                     }
                 }
-                .padding()
             }
             
         }.accentColor(.white)
