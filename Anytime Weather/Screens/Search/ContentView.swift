@@ -58,7 +58,8 @@ struct ContentView: View {
                 .navigationBarTitle("Anytime Weather")
                 .padding()
             }
-        }
+            
+        }.accentColor(.white)
         
     }
     
