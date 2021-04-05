@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var city = ""
+    @State private var keyword = ""
     
     var history = ["Surabaya", "Jakarta", "Surakarta", "Bandung", "Semarang", "Yogyakarta", "Medan", "Batam"]
     var searchSuffix = ["baya", "karta", "dung", "rang", "dan", "tam"]
@@ -31,12 +31,12 @@ struct ContentView: View {
                     
                     HStack {
                         
-                        TextField("Enter city", text: self.$city)
+                        TextField("Enter city", text: self.$keyword)
                             .padding()
                         
                         Spacer()
                         
-                        NavigationLink(destination: WeatherDetailView(city: self.city)) {
+                        NavigationLink(destination: WeatherDetailView(city: self.keyword)) {
                             Image(systemName: "chevron.forward.circle.fill")
                         }.padding()
                         
@@ -44,9 +44,9 @@ struct ContentView: View {
                     .background(Color.white)
                     .cornerRadius(3.0)
                     
-                    let isHistory = self.city.isEmpty
-                    ForEach(isHistory ? self.history : self.searchSuffix, id: \.self) { keyword in
-                        KeywordCell(keyword: keyword, isHistory: isHistory)
+                    let isHistory = self.keyword.isEmpty
+                    ForEach(isHistory ? self.history : self.searchSuffix, id: \.self) { recommended in
+                        KeywordCell(keyword: self.keyword + recommended, isHistory: isHistory)
                     }
                     .cornerRadius(3.0)
                     .listRowBackground(Color.clear)
