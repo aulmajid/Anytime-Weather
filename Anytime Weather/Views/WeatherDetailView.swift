@@ -12,7 +12,25 @@ struct WeatherDetailView: View {
     var city: String
     
     var body: some View {
-        Text("Hello, \(self.city)")
+        
+        VStack {
+            
+            HStack {
+                
+                VStack {
+                    
+                    Image(systemName: "pencil")
+                    
+                }
+                
+            }
+            
+            Spacer()
+            
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .background(Color.red)
+        
     }
     
 }
