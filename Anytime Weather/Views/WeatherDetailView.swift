@@ -13,22 +13,38 @@ struct WeatherDetailView: View {
     
     var body: some View {
         
-        VStack {
-            
-            HStack {
+        VStack(alignment: .center) {
+            VStack(alignment: .center) {
                 
-                VStack {
-                    
-                    Image(systemName: "pencil")
-                    
-                }
+                Text("Surabaya")
+                
+                Text("April 5, 2021")
+                
+                Image(systemName: "cloud.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 100)
+                
+                Text("Clouds")
+                
+                Text("23°F")
+                    .font(.system(size: 100))
+                
+                Text("Feels like 23°F")
+                
+                Text("Min :\t\t23°F\n" +
+                        "Max :\t\t23°F\n" +
+                        "Pressure :\t1000\n" +
+                        "Humidity :\t55")
+                    .multilineTextAlignment(.leading)
+                    .padding()
                 
             }
             
-            Spacer()
+            Text("Forecast")
             
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.red)
         
     }
