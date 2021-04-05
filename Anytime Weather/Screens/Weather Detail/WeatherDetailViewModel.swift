@@ -11,15 +11,17 @@ class WeatherDetailViewModel: ObservableObject {
     
     private let weatherService = WeatherService()
     
+    @Published var weather = Weather()
+    
     var city: String = ""
     
     var date: String {
         ""
     }
     
-    var weather: String {
-        ""
-    }
+//    var weather: String {
+//        ""
+//    }
     
     var temp: String {
         ""
@@ -50,7 +52,11 @@ class WeatherDetailViewModel: ObservableObject {
 extension WeatherDetailViewModel {
     
     func fetchWeather() {
-        weatherService.getWeather(city: self.city)
+        weatherService.getWeather(city: self.city) { weather in
+            if let weather = weather {
+                self.weather = weather
+            }
+        }
     }
     
 }

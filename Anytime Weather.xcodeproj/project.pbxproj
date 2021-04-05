@@ -16,6 +16,7 @@
 		D925B093261B100F00205E0D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B092261B100F00205E0D /* Color.swift */; };
 		D925B09A261B41FE00205E0D /* WeatherDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B099261B41FE00205E0D /* WeatherDetailViewModel.swift */; };
 		D925B0A3261B452C00205E0D /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0A2261B452C00205E0D /* WeatherService.swift */; };
+		D925B0A6261B4D4A00205E0D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0A5261B4D4A00205E0D /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D925B092261B100F00205E0D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D925B099261B41FE00205E0D /* WeatherDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewModel.swift; sourceTree = "<group>"; };
 		D925B0A2261B452C00205E0D /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		D925B0A5261B4D4A00205E0D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				D925B06C261AEFCE00205E0D /* WeatherDetailView.swift */,
 				D925B099261B41FE00205E0D /* WeatherDetailViewModel.swift */,
 				D925B0A2261B452C00205E0D /* WeatherService.swift */,
+				D925B0A5261B4D4A00205E0D /* Weather.swift */,
 			);
 			path = "Weather Detail";
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				D925B05D261AE6DD00205E0D /* ContentView.swift in Sources */,
 				D925B0A3261B452C00205E0D /* WeatherService.swift in Sources */,
 				D925B05B261AE6DD00205E0D /* Anytime_WeatherApp.swift in Sources */,
+				D925B0A6261B4D4A00205E0D /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

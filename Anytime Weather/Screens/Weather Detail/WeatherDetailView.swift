@@ -41,7 +41,7 @@ struct WeatherDetailView: View {
                 Text("Clouds")
                     .foregroundColor(.white)
                 
-                Text("23°F")
+                Text("\(self.vm.weather.main?.temp ?? 0)")
                     .font(.system(size: 130))
                     .foregroundColor(.white)
                 
