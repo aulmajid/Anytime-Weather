@@ -24,7 +24,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    Button(action: {print("TAP") }) {
+                    NavigationLink(destination: WeatherDetailView(city: self.city)) {
                         Image(systemName: "chevron.forward.circle.fill")
                     }.padding()
                     
@@ -42,6 +42,7 @@ struct ContentView: View {
         }
         
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
