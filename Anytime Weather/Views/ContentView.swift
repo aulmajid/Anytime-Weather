@@ -40,10 +40,9 @@ struct ContentView: View {
                     }
                     .background(Color.white)
                     .cornerRadius(3.0)
-                    .padding()
                     
                     ForEach(0...5, id: \.self) { city in
-                        let a = "\(city) hahaha"
+                        let a = "\(self.city)"
                         CityCell(city: a)
                     }
                     .cornerRadius(3.0)
@@ -53,6 +52,7 @@ struct ContentView: View {
                     
                 }
                 .navigationBarTitle("Anytime Weather")
+                .padding()
             }
         }
         
@@ -66,15 +66,32 @@ struct CityCell: View {
     
     var body: some View {
         
-        HStack {
+        VStack(alignment: .center, spacing: 10) {
             
-            Text(self.city)
+            HStack(alignment: .center) {
+                
+                Image(systemName: self.city.isEmpty ? "clock" : "magnifyingglass")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.white)
+                    .frame(width: 15, height: 15, alignment: .center)
+                
+                Spacer().frame(width: 20)
+                
+                Text(self.city)
+                    .foregroundColor(.white)
+                    .font(.body)
+                
+                Spacer()
+                
+                Image(systemName: "arrow.up.backward")
+                    .foregroundColor(.white)
+                
+            }
             
-            Spacer()
+            Color.white.frame(height: 1)
             
-        }
-        .background(Color.white)
-        .padding()
+        }.padding()
         
     }
     
