@@ -44,10 +44,10 @@ struct WeatherDetailView: View {
                     .foregroundColor(.white)
                 
                 Text(vm.temp)
-                    .font(.system(size: 130))
+                    .font(.system(size: 110))
                     .foregroundColor(.white)
                 
-                Text("Feels like \(vm.feelsLike)")
+                Text(vm.feelsLike)
                     .foregroundColor(.white)
                 
                 Text("Min :\t\t\t\(vm.minTemp)\n" +
@@ -58,6 +58,22 @@ struct WeatherDetailView: View {
                     .multilineTextAlignment(.leading)
                     .foregroundColor(.white)
                     .padding()
+                
+                Button(action: {
+                  vm.fetchWeather()
+                }) {
+                    HStack {
+                        
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                        
+                        Text(vm.lastUpdated)
+                            .font(.caption)
+                            .foregroundColor(.white)
+                            .padding()
+                        
+                    }
+                }
                 
                 Spacer()
                 

@@ -29,6 +29,14 @@ extension WeatherDetailViewModel {
         return "\(date_EEEE)\n\(date_MMMMdyyyy)"
     }
     
+    var lastUpdated: String {
+        let now = Date()
+        let formatter = DateFormatter()
+        formatter.setLocalizedDateFormatFromTemplate("HH:mm")
+        let data_HHmm = formatter.string(from: now)
+        return "Last updated: \(data_HHmm)"
+    }
+    
     var temp: String {
         "\(Int(weather.main?.temp ?? 0))"
     }
@@ -42,7 +50,7 @@ extension WeatherDetailViewModel {
     }
     
     var feelsLike: String {
-        "\(Int(weather.main?.feels_like ?? 0))"
+        "Feels like \(Int(weather.main?.feels_like ?? 0))"
     }
     
     var pressure: String {
