@@ -8,12 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var city = ""
+    
     var body: some View {
         
         NavigationView() {
             VStack {
-                Text("Hello world")
-            }
+                
+                TextField("Enter city", text: self.$city)
+                
+                List(0...5, id: \.self) { city in
+                    Text("\(city)")
+                }
+                
+                Spacer()
+                
+            }.padding()
             .navigationBarTitle("Anytime Weather")
         }
         
