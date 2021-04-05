@@ -28,9 +28,11 @@ struct WeatherDetailView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 
-                Text("April 5, 2021")
-                    .font(.title)
+                Text(vm.date)
+                    .font(.title3)
                     .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding()
                 
                 Image(systemName: "cloud.fill")
                     .resizable()

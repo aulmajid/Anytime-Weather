@@ -15,13 +15,19 @@ class WeatherDetailViewModel: ObservableObject {
     
     var city: String = ""
     
-    var date: String {
-        ""
-    }
+}
+
+extension WeatherDetailViewModel {
     
-//    var weather: String {
-//        ""
-//    }
+    var date: String {
+        let now = Date()
+        let formatter = DateFormatter()
+        formatter.setLocalizedDateFormatFromTemplate("EEEE")
+        let date_EEEE = formatter.string(from: now)
+        formatter.setLocalizedDateFormatFromTemplate("MMMM d, yyyy")
+        let date_MMMMdyyyy = formatter.string(from: now)
+        return "\(date_EEEE)\n\(date_MMMMdyyyy)"
+    }
     
     var temp: String {
         "\(Int(weather.main?.temp ?? 0))"
