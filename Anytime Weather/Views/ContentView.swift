@@ -11,34 +11,45 @@ struct ContentView: View {
     
     @State private var city = ""
     
+    init() {
+        UITableView.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+    
     var body: some View {
         
         NavigationView() {
             
-            VStack {
+            ZStack {
                 
-                HStack {
+                Color.color6.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                
+                VStack {
                     
-                    TextField("Enter city", text: self.$city)
-                        .padding()
+                    HStack {
+                        
+                        TextField("Enter city", text: self.$city)
+                            .padding()
+                        
+                        Spacer()
+                        
+                        NavigationLink(destination: WeatherDetailView(city: self.city)) {
+                            Image(systemName: "chevron.forward.circle.fill")
+                        }.padding()
+                        
+                    }
+                    .background(Color.white)
+                    .cornerRadius(4)
+                    
+                    List(0...5, id: \.self) { city in
+                        Text("\(city)")
+                    }
                     
                     Spacer()
                     
-                    NavigationLink(destination: WeatherDetailView(city: self.city)) {
-                        Image(systemName: "chevron.forward.circle.fill")
-                    }.padding()
-                    
-                }.background(Color.green)
-                
-                List(0...5, id: \.self) { city in
-                    Text("\(city)")
-                }
-                
-                Spacer()
-                
-            }.padding()
-            .background(Color.red)
-            .navigationBarTitle("Anytime Weather")
+                }.padding()
+                .navigationBarTitle("Anytime Weather")
+            }
         }
         
     }

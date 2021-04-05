@@ -13,6 +13,11 @@ struct WeatherDetailView: View {
     
     var body: some View {
         
+        ZStack {
+    
+            
+            Color.clear.edgesIgnoringSafeArea(.all)
+        
         VStack(alignment: .center) {
             VStack(alignment: .center) {
                 
@@ -48,8 +53,9 @@ struct WeatherDetailView: View {
             Text("Forecast")
             
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.red)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         
     }
     
