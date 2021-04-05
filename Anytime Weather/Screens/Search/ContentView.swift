@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @State private var keyword = ""
     
+    @State var settingsButtonActive = false
+    
     var history = ["Surabaya", "Jakarta", "Surakarta", "Bandung", "Semarang", "Yogyakarta", "Medan", "Batam"]
     var searchSuffix = ["", "baya", "karta", "dung", "rang", "dan", "tam"]
     
@@ -56,6 +58,18 @@ struct ContentView: View {
                     
                 }
                 .navigationBarTitle("Anytime Weather")
+                .background(
+                    NavigationLink(destination: Text("Destination"), isActive: $settingsButtonActive) {}
+                )
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            settingsButtonActive = true
+                        }) {
+                            Image(systemName: "gearshape")
+                        }
+                    }
+                }
                 .padding()
             }
             
@@ -73,33 +87,33 @@ struct KeywordCell: View {
     var body: some View {
         
         NavigationLink(destination: WeatherDetailView(city: keyword)) {
-        
-        VStack(alignment: .center, spacing: 10) {
             
-            HStack(alignment: .center) {
+            VStack(alignment: .center, spacing: 10) {
                 
-                Image(systemName: self.isHistory ? "clock" : "magnifyingglass")
-                    .resizable()
-                    .foregroundColor(.white)
-                    .frame(width: 15, height: 15, alignment: .center)
+                HStack(alignment: .center) {
+                    
+                    Image(systemName: self.isHistory ? "clock" : "magnifyingglass")
+                        .resizable()
+                        .foregroundColor(.white)
+                        .frame(width: 15, height: 15, alignment: .center)
+                    
+                    Spacer().frame(width: 20)
+                    
+                    Text(self.keyword)
+                        .foregroundColor(.white)
+                        .font(.body)
+                        .frame(height: 15)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "arrow.up.backward")
+                        .foregroundColor(.white)
+                    
+                }
                 
-                Spacer().frame(width: 20)
+                Color.white.frame(height: 1)
                 
-                Text(self.keyword)
-                    .foregroundColor(.white)
-                    .font(.body)
-                    .frame(height: 15)
-                
-                Spacer()
-                
-                Image(systemName: "arrow.up.backward")
-                    .foregroundColor(.white)
-                
-            }
-            
-            Color.white.frame(height: 1)
-            
-        }.padding()
+            }.padding()
             
         }
         
