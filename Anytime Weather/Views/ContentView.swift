@@ -38,6 +38,7 @@ struct ContentView: View {
                         
                         NavigationLink(destination: WeatherDetailView(city: self.keyword)) {
                             Image(systemName: "chevron.forward.circle.fill")
+                                .foregroundColor(.color6)
                         }.padding()
                         
                     }
