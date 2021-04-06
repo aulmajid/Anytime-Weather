@@ -25,6 +25,8 @@
 		D925B0CB261C18DD00205E0D /* DownloadUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0CA261C18DD00205E0D /* DownloadUtils.swift */; };
 		D925B121261C627100205E0D /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B120261C627100205E0D /* ForecastView.swift */; };
 		D925B127261C6C2700205E0D /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B126261C6C2700205E0D /* MapsView.swift */; };
+		D925B12C261C78B400205E0D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12B261C78B400205E0D /* SearchViewModel.swift */; };
+		D925B12F261C7AE000205E0D /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12E261C7AE000205E0D /* Keyword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		D925B0CA261C18DD00205E0D /* DownloadUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadUtils.swift; sourceTree = "<group>"; };
 		D925B120261C627100205E0D /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 		D925B126261C6C2700205E0D /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
+		D925B12B261C78B400205E0D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D925B12E261C7AE000205E0D /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				D925B05C261AE6DD00205E0D /* SearchView.swift */,
+				D925B12B261C78B400205E0D /* SearchViewModel.swift */,
+				D925B12E261C7AE000205E0D /* Keyword.swift */,
 			);
 			path = "Search Location";
 			sourceTree = "<group>";
@@ -310,7 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D925B127261C6C2700205E0D /* MapsView.swift in Sources */,
+				D925B12F261C7AE000205E0D /* Keyword.swift in Sources */,
 				D925B0C6261BFC1D00205E0D /* AppSettings.swift in Sources */,
+				D925B12C261C78B400205E0D /* SearchViewModel.swift in Sources */,
 				D925B06D261AEFCE00205E0D /* WeatherDetailView.swift in Sources */,
 				D925B09A261B41FE00205E0D /* WeatherDetailViewModel.swift in Sources */,
 				D925B0CB261C18DD00205E0D /* DownloadUtils.swift in Sources */,

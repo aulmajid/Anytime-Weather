@@ -14,6 +14,8 @@ struct SearchView: View {
     
     @State private var keyword = ""
     
+    private var vm = SearchViewModel()
+    
     var history = ["Surabaya", "Jakarta", "Surakarta", "Bandung", "Auckland", "Tokyo", "London"]
     var searchSuffix = ["", "baya", "karta", "dung", "rang", "dan"]
     
@@ -50,8 +52,8 @@ struct SearchView: View {
                     .cornerRadius(3.0)
                     
                     let isHistory = self.keyword.isEmpty
-                    ForEach(isHistory ? self.history : self.searchSuffix, id: \.self) { recommended in
-                        KeywordCell(keyword: self.keyword + recommended, isHistory: isHistory)
+                    ForEach(self.vm.getRecommendations(keyword: self.keyword), id: \.self) { keyword in
+                        KeywordCell(keyword: keyword.name, isHistory: isHistory)
                     }
                     .cornerRadius(3.0)
                     .listRowBackground(Color.clear)
