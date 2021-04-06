@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var showSettings = false
+    @State var showMaps = false
     
     @State private var keyword = ""
     
@@ -61,8 +62,14 @@ struct ContentView: View {
             }
             .navigationBarTitle("Anytime Weather")
             .background(NavigationLink(destination: SettingsView(), isActive: $showSettings) {})
+            .background(NavigationLink(destination: MapsView(), isActive: $showMaps) {})
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        showMaps = true
+                    }) {
+                        Image(systemName: "map")
+                    }
                     Button(action: {
                         showSettings = true
                     }) {
