@@ -70,8 +70,12 @@ extension WeatherDetailViewModel {
         "\(weather.weather?[0].main ?? "") (\(weather.weather?[0].description ?? ""))"
     }
     
-    var icon: String {
-        "http://openweathermap.org/img/wn/\(weather.weather?[0].icon ?? "10d")@2x.png"
+    var iconURL: String {
+        "https://openweathermap.org/img/wn/\(weather.weather?[0].icon ?? "10d")@2x.png"
+    }
+    
+    var iconFileName: String {
+        "\(weather.weather?[0].description ?? "").png"
     }
     
 }

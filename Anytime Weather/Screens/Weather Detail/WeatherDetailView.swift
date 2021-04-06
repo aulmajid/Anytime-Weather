@@ -101,7 +101,12 @@ struct WeatherDetailView: View {
         })
         .background(NavigationLink(destination: SettingsView(), isActive: $showSettings) {})
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button(action: {
+                    DownloadUtils.download(url: vm.iconURL, fileName: vm.iconFileName, completion:{_ in })
+                }) {
+                    Image(systemName: "tray.and.arrow.down")
+                }
                 Button(action: {
                     showSettings = true
                 }) {
