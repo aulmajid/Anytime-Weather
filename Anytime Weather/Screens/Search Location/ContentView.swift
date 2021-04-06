@@ -18,6 +18,7 @@ struct ContentView: View {
     var searchSuffix = ["", "baya", "karta", "dung", "rang", "dan"]
     
     init() {
+        UITableView.appearance().backgroundColor = .clear
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
