@@ -93,12 +93,14 @@ struct WeatherDetailView: View {
                 Button(action: {
                     self.showForecast.toggle()
                 }) {
-                    Text("Forecast")
-                        .foregroundColor(.white)
-                        .padding()
+                    Text("Show more forecast")
+                        .foregroundColor(.color6)
                 }.sheet(isPresented: self.$showForecast) {
                     ForecastView()
                 }
+                .frame(width: 200, height: 36)
+                .background(Color.white)
+                .cornerRadius(18.0)
                 
             }
             
