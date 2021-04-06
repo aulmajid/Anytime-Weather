@@ -25,6 +25,10 @@ extension WeatherDetailViewModel {
         settings?.unit.suffix ?? ""
     }
     
+    var time: String {
+        "19:40"
+    }
+    
     var date: String {
         let now = Date()
         let formatter = DateFormatter()
@@ -32,7 +36,7 @@ extension WeatherDetailViewModel {
         let date_EEEE = formatter.string(from: now)
         formatter.setLocalizedDateFormatFromTemplate("MMMM d, yyyy")
         let date_MMMMdyyyy = formatter.string(from: now)
-        return "\(date_EEEE)\n\(date_MMMMdyyyy)"
+        return "\(date_EEEE), \(date_MMMMdyyyy)"
     }
     
     var lastUpdated: String {
