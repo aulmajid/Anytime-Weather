@@ -57,7 +57,7 @@ struct UnitCell: View {
             
             Spacer()
             
-            Image(systemName: "gearshape")
+            Image(systemName: "checkmark.circle.fill")
                 .isHidden(!self.isSelected)
                 .foregroundColor(.color6)
             
