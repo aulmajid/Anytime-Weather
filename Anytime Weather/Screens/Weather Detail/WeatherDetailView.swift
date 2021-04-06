@@ -13,6 +13,7 @@ struct WeatherDetailView: View {
     
     @State private var showSettings = false
     @State private var showToast = false
+    @State private var showForecast = false
     
     @EnvironmentObject private var settings: AppSettings
     @ObservedObject private var vm = WeatherDetailViewModel()
@@ -89,9 +90,15 @@ struct WeatherDetailView: View {
                 
                 Spacer()
                 
-                Text("Forecast")
-                    .foregroundColor(.white)
-                    .padding()
+                Button(action: {
+                    self.showForecast.toggle()
+                }) {
+                    Text("Forecast")
+                        .foregroundColor(.white)
+                        .padding()
+                }.sheet(isPresented: self.$showForecast) {
+                    ForecastView()
+                }
                 
             }
             
