@@ -15,6 +15,7 @@ class WeatherDetailViewModel: ObservableObject {
     
     var city: String = ""
     var settings: AppSettings?
+    var backgroundImage = ""
     
 }
 
@@ -92,6 +93,10 @@ extension WeatherDetailViewModel {
                 self.weather = weather
             }
         }
+    }
+    
+    func fetchBackgroundImage() {
+        self.backgroundImage = ["bg1", "bg2", "bg3", "bg4", "bg5", "bg6"].randomElement()!
     }
     
 }

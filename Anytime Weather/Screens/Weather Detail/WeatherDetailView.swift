@@ -27,7 +27,7 @@ struct WeatherDetailView: View {
         ZStack {
             
             GeometryReader { geo in
-                    Image("bg1")
+                Image(vm.backgroundImage)
                         .resizable()
                         .aspectRatio(geo.size, contentMode: .fill)
                         .edgesIgnoringSafeArea(.all)
@@ -119,6 +119,10 @@ struct WeatherDetailView: View {
         .onAppear(perform: {
             vm.settings = settings
             vm.fetchWeather()
+            vm.fetchBackgroundImage()
+        })
+        .onDisappear(perform: {
+            vm.backgroundImage = ""
         })
         .background(NavigationLink(destination: SettingsView(), isActive: $showSettings) {})
         .toolbar {
