@@ -23,7 +23,7 @@ struct ForecastView: View {
             
             Color.color1.edgesIgnoringSafeArea(.all)
             
-            VStack (alignment: .leading) {
+            VStack (alignment: .center) {
                 
                 Spacer()
                     .frame(height: 30)
@@ -34,6 +34,13 @@ struct ForecastView: View {
                     Text("Month").tag(2)
                 })
                 .pickerStyle(SegmentedPickerStyle())
+                
+                Spacer()
+                
+                Text("COMING\nSOON")
+                    .font(.system(size: 50))
+                    .foregroundColor(.color6)
+                    .multilineTextAlignment(.center)
                 
                 Spacer()
                 
