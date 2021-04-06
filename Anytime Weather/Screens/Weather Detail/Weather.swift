@@ -10,7 +10,7 @@ import Foundation
 struct Weather: Decodable {
     var main: Weather_main?
     var weather: [Weather_weather]?
-    var timezone: Int?
+    var timezone: Double?
 }
 
 struct Weather_main: Decodable {

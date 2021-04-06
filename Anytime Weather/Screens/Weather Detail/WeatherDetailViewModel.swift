@@ -21,21 +21,28 @@ class WeatherDetailViewModel: ObservableObject {
 
 extension WeatherDetailViewModel {
     
-    var suffix: String {
+    private var suffix: String {
         settings?.unit.suffix ?? ""
     }
     
+    private var now: Date {
+        let timeInterval = (weather.timezone ?? 0) - Double(TimeZone.current.secondsFromGMT())
+        return Date(timeIntervalSinceNow: timeInterval)
+    }
+    
     var time: String {
-        "19:40"
+        let formatter = DateFormatter()
+        formatter.setLocalizedDateFormatFromTemplate("HH.mm")
+        let data_HHmm = formatter.string(from: self.now)
+        return "\(data_HHmm)"
     }
     
     var date: String {
-        let now = Date()
         let formatter = DateFormatter()
         formatter.setLocalizedDateFormatFromTemplate("EEEE")
-        let date_EEEE = formatter.string(from: now)
+        let date_EEEE = formatter.string(from: self.now)
         formatter.setLocalizedDateFormatFromTemplate("MMMM d, yyyy")
-        let date_MMMMdyyyy = formatter.string(from: now)
+        let date_MMMMdyyyy = formatter.string(from: self.now)
         return "\(date_EEEE), \(date_MMMMdyyyy)"
     }
     
