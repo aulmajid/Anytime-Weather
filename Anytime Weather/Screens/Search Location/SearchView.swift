@@ -16,9 +16,6 @@ struct SearchView: View {
     
     private var vm = SearchViewModel()
     
-    var history = ["Surabaya", "Jakarta", "Surakarta", "Bandung", "Auckland", "Tokyo", "London"]
-    var searchSuffix = ["", "baya", "karta", "dung", "rang", "dan"]
-    
     init() {
         UITableView.appearance().backgroundColor = .clear
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
@@ -51,9 +48,8 @@ struct SearchView: View {
                     .background(Color.white)
                     .cornerRadius(3.0)
                     
-                    let isHistory = self.keyword.isEmpty
                     ForEach(self.vm.getRecommendations(keyword: self.keyword), id: \.self) { keyword in
-                        KeywordCell(keyword: keyword.name, isHistory: isHistory)
+                        KeywordCell(keyword: keyword)
                     }
                     .cornerRadius(3.0)
                     .listRowBackground(Color.clear)
@@ -89,25 +85,24 @@ struct SearchView: View {
 
 struct KeywordCell: View {
     
-    var keyword: String
-    var isHistory: Bool
+    var keyword: Keyword
     
     var body: some View {
         
-        NavigationLink(destination: WeatherDetailView(city: keyword)) {
+        NavigationLink(destination: WeatherDetailView(city: keyword.name)) {
             
             VStack(alignment: .center, spacing: 10) {
                 
                 HStack(alignment: .center) {
                     
-                    Image(systemName: self.isHistory ? "clock" : "magnifyingglass")
+                    Image(systemName: self.keyword.isHistory ? "clock" : "magnifyingglass")
                         .resizable()
                         .foregroundColor(.white)
                         .frame(width: 15, height: 15, alignment: .center)
                     
                     Spacer().frame(width: 20)
                     
-                    Text(self.keyword)
+                    Text(self.keyword.name)
                         .foregroundColor(.white)
                         .font(.body)
                         .frame(height: 15)
