@@ -27,8 +27,6 @@ struct SearchView: View {
             
             ZStack {
                 
-                
-                
                 GeometryReader { geo in
                     Image("bg_search")
                         .resizable()

@@ -161,7 +161,10 @@ struct WeatherDetailView: View {
                     Image(systemName: "tray.and.arrow.down")
                 }
                 Button(action: {
-                    showSettings = true
+                    if let image = UIImage(named: vm.backgroundImage) {
+                        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                        self.showToast.toggle()
+                    }
                 }) {
                     Image(systemName: "arrow.down.doc")
                 }
