@@ -71,7 +71,11 @@ extension WeatherDetailViewModel {
     }
     
     var iconURL: String {
-        "https://openweathermap.org/img/wn/\(weather.weather?[0].icon ?? "10d")@2x.png"
+        if let icon = weather.weather?[0].icon {
+            return "https://openweathermap.org/img/wn/\(icon)@2x.png"
+        } else {
+            return ""
+        }
     }
     
     var iconFileName: String {

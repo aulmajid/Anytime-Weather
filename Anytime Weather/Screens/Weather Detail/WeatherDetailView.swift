@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct WeatherDetailView: View {
     
@@ -13,7 +14,6 @@ struct WeatherDetailView: View {
     
     @EnvironmentObject var settings: AppSettings
     @ObservedObject var vm = WeatherDetailViewModel()
-    @State var isLoading = false
     
     init(city: String) {
         vm.city = city
@@ -38,7 +38,7 @@ struct WeatherDetailView: View {
                     .multilineTextAlignment(.center)
                     .padding()
                 
-                Image(systemName: "cloud.fill")
+                KFImage.url(URL(string: vm.iconURL))
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 100)

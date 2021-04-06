@@ -13,8 +13,8 @@ struct ContentView: View {
     
     @State private var keyword = ""
     
-    var history = ["Surabaya", "Jakarta", "Surakarta", "Bandung", "Semarang", "Yogyakarta", "Medan", "Batam"]
-    var searchSuffix = ["", "baya", "karta", "dung", "rang", "dan", "tam"]
+    var history = ["Surabaya", "Jakarta", "Surakarta", "Bandung", "Auckland", "Tokyo", "London"]
+    var searchSuffix = ["", "baya", "karta", "dung", "rang", "dan"]
     
     init() {
         UITableView.appearance().backgroundColor = .clear
