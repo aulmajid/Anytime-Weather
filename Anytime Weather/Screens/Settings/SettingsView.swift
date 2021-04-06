@@ -14,20 +14,30 @@ struct SettingsView: View {
     
     var body: some View {
         
-        Form {
-            Section(header: Text(settings.unit.name)) {
-                
-                ForEach(units, id: \.self) { unit in
+        ZStack {
+            
+            Color.color6.edgesIgnoringSafeArea(.all)
+            
+            Form {
+                Section(header:
+                            Text("Select unit")
+                            .foregroundColor(.white)
+                            .bold()) {
                     
-                    Button(action: {
-                        self.settings.unit = unit
-                    }) {
-                        UnitCell(unit: unit, isSelected: unit == self.settings.unit)
+                    ForEach(units, id: \.self) { unit in
+                        
+                        Button(action: {
+                            self.settings.unit = unit
+                        }) {
+                            UnitCell(unit: unit, isSelected: unit == self.settings.unit)
+                        }
+                        
                     }
                     
-                }
-                
+                }.listRowBackground(Color.white)
+                .accentColor(.white)
             }
+            
         }
     }
     
@@ -39,17 +49,19 @@ struct UnitCell: View {
     var isSelected: Bool
     
     var body: some View {
+        
+        HStack {
             
-            HStack {
-                
-                Text(unit.name)
-                
-                Spacer()
-                
-                Image(systemName: "gearshape")
-                    .isHidden(!self.isSelected)
-                
-            }
+            Text(unit.name)
+                .foregroundColor(.color6)
+            
+            Spacer()
+            
+            Image(systemName: "gearshape")
+                .isHidden(!self.isSelected)
+                .foregroundColor(.color6)
+            
+        }
         
     }
     
