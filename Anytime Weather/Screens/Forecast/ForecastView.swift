@@ -8,9 +8,35 @@
 import SwiftUI
 
 struct ForecastView: View {
+    
+    @State private var selectedIndex = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ZStack {
+            
+            Color.color1.edgesIgnoringSafeArea(.all)
+            
+            VStack (alignment: .leading) {
+                
+                Spacer()
+                    .frame(height: 30)
+                
+                Picker("Tab", selection: $selectedIndex, content: {
+                    Text("Weekend").tag(0)
+                    Text("15 days").tag(1)
+                    Text("Month").tag(2)
+                })
+                .pickerStyle(SegmentedPickerStyle())
+                
+                Spacer()
+                
+            }.padding()
+            
+        }
+        
     }
+    
 }
 
 struct ForecastView_Previews: PreviewProvider {
