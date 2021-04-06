@@ -34,19 +34,17 @@ struct SearchView: View {
                     HStack {
                         
                         TextField("Enter city", text: self.$keyword)
-                            .foregroundColor(.color6)
+                            .foregroundColor(.white)
                             .padding()
                         
                         Spacer()
                         
                         NavigationLink(destination: WeatherDetailView(city: self.keyword)) {
                             Image(systemName: "chevron.forward.circle.fill")
-                                .foregroundColor(.color6)
+                                .foregroundColor(.white)
                         }.padding()
                         
                     }
-                    .background(Color.white)
-                    .cornerRadius(3.0)
                     
                     ForEach(self.vm.getRecommendations(keyword: self.keyword), id: \.self) { keyword in
                         KeywordCell(keyword: keyword)
