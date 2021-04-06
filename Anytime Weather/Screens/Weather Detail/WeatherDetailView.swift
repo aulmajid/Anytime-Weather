@@ -7,13 +7,15 @@
 
 import SwiftUI
 import Kingfisher
+import AlertToast
 
 struct WeatherDetailView: View {
     
-    @State var showSettings = false
+    @State private var showSettings = false
+    @State private var showToast = false
     
-    @EnvironmentObject var settings: AppSettings
-    @ObservedObject var vm = WeatherDetailViewModel()
+    @EnvironmentObject private var settings: AppSettings
+    @ObservedObject private var vm = WeatherDetailViewModel()
     
     init(city: String) {
         vm.city = city
@@ -109,6 +111,7 @@ struct WeatherDetailView: View {
                             case .success(let value):
                                 debugPrint(value)
                                 UIImageWriteToSavedPhotosAlbum(value.image, nil, nil, nil)
+                                self.showToast.toggle()
                             case .failure(let error):
                                 debugPrint(error)
                             }
@@ -123,6 +126,8 @@ struct WeatherDetailView: View {
                     Image(systemName: "gearshape")
                 }
             }
+        }.toast(isPresenting: $showToast, duration: 2){
+            AlertToast(type: .complete(.color6), title: "Image Saved!")
         }
         
     }

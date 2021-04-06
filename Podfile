@@ -8,5 +8,6 @@ target 'Anytime Weather' do
   # Pods for Anytime Weather
   pod 'Alamofire', '~> 5.2'
   pod 'Kingfisher', '~> 6.0'
+  pod 'AlertToast'
 
 end
