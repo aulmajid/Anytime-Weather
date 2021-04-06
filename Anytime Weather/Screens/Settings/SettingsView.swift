@@ -9,20 +9,20 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @State private var selectedUnit = "Celcius"
-    let units = ["Celcius", "Fahrenheit"]
+    @EnvironmentObject var settings: AppSettings
+    let units = Unit.all()
     
     var body: some View {
         
         Form {
-            Section(header: Text(self.selectedUnit)) {
+            Section(header: Text(settings.unit.name)) {
                 
                 ForEach(units, id: \.self) { unit in
                     
                     Button(action: {
-                        self.selectedUnit = unit
+                        self.settings.unit = unit
                     }) {
-                        UnitCell(unit: unit, isSelected: unit == self.selectedUnit)
+                        UnitCell(unit: unit, isSelected: unit == self.settings.unit)
                     }
                     
                 }
@@ -35,14 +35,14 @@ struct SettingsView: View {
 
 struct UnitCell: View {
     
-    var unit: String
+    var unit: Unit
     var isSelected: Bool
     
     var body: some View {
             
             HStack {
                 
-                Text(unit)
+                Text(unit.name)
                 
                 Spacer()
                 

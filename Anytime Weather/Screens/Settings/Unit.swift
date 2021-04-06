@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Unit {
+struct Unit: Hashable {
     var name: String
     var suffix: String
     var apiParam: String
@@ -15,11 +15,11 @@ struct Unit {
 
 extension Unit {
     
+    static var celcius = Unit(name: "Celcius", suffix: "°C", apiParam: "metric")
+    static var fahrenheit = Unit(name: "Fahrenheit", suffix: "°F", apiParam: "imperial")
+    
     static func all() -> [Unit] {
-        var units = [Unit]()
-        units.append(Unit(name: "Celcius", suffix: "°C", apiParam: "metric"))
-        units.append(Unit(name: "Fahrenheit", suffix: "°F", apiParam: "imperial"))
-        return units
+        return [celcius, fahrenheit]
     }
     
 }

@@ -21,6 +21,7 @@
 		D925B0B5261BCCCD00205E0D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0B4261BCCCD00205E0D /* SettingsView.swift */; };
 		D925B0B9261BD57300205E0D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0B8261BD57300205E0D /* View.swift */; };
 		D925B0C0261BEF7100205E0D /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0BF261BEF7100205E0D /* Unit.swift */; };
+		D925B0C6261BFC1D00205E0D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0C5261BFC1D00205E0D /* AppSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D925B0B4261BCCCD00205E0D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D925B0B8261BD57300205E0D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		D925B0BF261BEF7100205E0D /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		D925B0C5261BFC1D00205E0D /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			children = (
 				D925B0B4261BCCCD00205E0D /* SettingsView.swift */,
 				D925B0BF261BEF7100205E0D /* Unit.swift */,
+				D925B0C5261BFC1D00205E0D /* AppSettings.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D925B0C6261BFC1D00205E0D /* AppSettings.swift in Sources */,
 				D925B06D261AEFCE00205E0D /* WeatherDetailView.swift in Sources */,
 				D925B09A261B41FE00205E0D /* WeatherDetailViewModel.swift in Sources */,
 				D925B0B9261BD57300205E0D /* View.swift in Sources */,

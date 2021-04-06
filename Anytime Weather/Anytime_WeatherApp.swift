@@ -13,6 +13,7 @@ struct Anytime_WeatherApp: App {
         WindowGroup {
             ContentView()
                 .preferredColorScheme(.dark)
+                .environmentObject(AppSettings())
         }
     }
 }
