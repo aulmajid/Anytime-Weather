@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var keyword = ""
+    @State var showSettings = false
     
-    @State var settingsButtonActive = false
+    @State private var keyword = ""
     
     var history = ["Surabaya", "Jakarta", "Surakarta", "Bandung", "Semarang", "Yogyakarta", "Medan", "Batam"]
     var searchSuffix = ["", "baya", "karta", "dung", "rang", "dan", "tam"]
@@ -60,11 +60,11 @@ struct ContentView: View {
                 .padding()
             }
             .navigationBarTitle("Anytime Weather")
-            .background(NavigationLink(destination: SettingsView(), isActive: $settingsButtonActive) {})
+            .background(NavigationLink(destination: SettingsView(), isActive: $showSettings) {})
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        settingsButtonActive = true
+                        showSettings = true
                     }) {
                         Image(systemName: "gearshape")
                     }

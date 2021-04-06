@@ -9,6 +9,8 @@ import SwiftUI
 
 struct WeatherDetailView: View {
     
+    @State var showSettings = false
+    
     @EnvironmentObject var settings: AppSettings
     @ObservedObject var vm = WeatherDetailViewModel()
     @State var isLoading = false
@@ -97,6 +99,16 @@ struct WeatherDetailView: View {
             vm.settings = settings
             vm.fetchWeather()
         })
+        .background(NavigationLink(destination: SettingsView(), isActive: $showSettings) {})
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    showSettings = true
+                }) {
+                    Image(systemName: "gearshape")
+                }
+            }
+        }
         
     }
     
