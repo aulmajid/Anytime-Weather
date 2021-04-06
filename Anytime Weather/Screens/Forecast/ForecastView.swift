@@ -11,6 +11,12 @@ struct ForecastView: View {
     
     @State private var selectedIndex = 0
     
+    init() {
+        UISegmentedControl.appearance().selectedSegmentTintColor = .white
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(cgColor: Color.color6.cgColor!)], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(cgColor: Color.color6.cgColor!)], for: .normal)
+    }
+    
     var body: some View {
         
         ZStack {
