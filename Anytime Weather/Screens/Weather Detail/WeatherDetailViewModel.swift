@@ -12,6 +12,7 @@ class WeatherDetailViewModel: ObservableObject {
     private let weatherService = WeatherService()
     
     @Published var weather = Weather()
+    @Published var isLoading = false
     
     var city: String = ""
     var settings: AppSettings?
@@ -99,10 +100,12 @@ extension WeatherDetailViewModel {
 extension WeatherDetailViewModel {
     
     func fetchWeather() {
+        self.isLoading = true
         weatherService.getWeather(city: self.city, unit: settings?.unit.apiParam ?? "metric") { weather in
             if let weather = weather {
                 self.weather = weather
             }
+            self.isLoading = false
         }
     }
     

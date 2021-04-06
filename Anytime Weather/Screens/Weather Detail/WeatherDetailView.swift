@@ -120,7 +120,7 @@ struct WeatherDetailView: View {
                 .background(Color.white)
                 .cornerRadius(18.0)
                 
-            }
+            }.isHidden(vm.isLoading)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
