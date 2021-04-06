@@ -44,7 +44,7 @@ struct WeatherDetailView: View {
                     .frame(width: 200, height: 100)
                     .foregroundColor(.white)
                 
-                Text("Clouds")
+                Text(vm.condition)
                     .foregroundColor(.white)
                 
                 Text(vm.temp)

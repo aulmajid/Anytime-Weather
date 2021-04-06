@@ -9,6 +9,7 @@ import Foundation
 
 struct Weather: Decodable {
     var main: Weather_main?
+    var weather: [Weather_weather]?
 }
 
 struct Weather_main: Decodable {
@@ -18,4 +19,10 @@ struct Weather_main: Decodable {
     var temp_max: Double?
     var pressure: Int?
     var humidity: Int?
+}
+
+struct Weather_weather: Decodable {
+    var main: String?
+    var description: String?
+    var icon: String?
 }
