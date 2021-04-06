@@ -14,10 +14,15 @@ class WeatherDetailViewModel: ObservableObject {
     @Published var weather = Weather()
     
     var city: String = ""
+    var settings: AppSettings?
     
 }
 
 extension WeatherDetailViewModel {
+    
+    var suffix: String {
+        settings?.unit.suffix ?? ""
+    }
     
     var date: String {
         let now = Date()
@@ -38,19 +43,19 @@ extension WeatherDetailViewModel {
     }
     
     var temp: String {
-        "\(Int(weather.main?.temp ?? 0))"
+        "\(Int(weather.main?.temp ?? 0))" + suffix
     }
     
     var maxTemp: String {
-        "\(Int(weather.main?.temp_max ?? 0))"
+        "\(Int(weather.main?.temp_max ?? 0))" + suffix
     }
     
     var minTemp: String {
-        "\(Int(weather.main?.temp_min ?? 0))"
+        "\(Int(weather.main?.temp_min ?? 0))" + suffix
     }
     
     var feelsLike: String {
-        "Feels like \(Int(weather.main?.feels_like ?? 0))"
+        "Feels like \(Int(weather.main?.feels_like ?? 0))" + suffix
     }
     
     var pressure: String {
@@ -66,7 +71,7 @@ extension WeatherDetailViewModel {
 extension WeatherDetailViewModel {
     
     func fetchWeather() {
-        weatherService.getWeather(city: self.city) { weather in
+        weatherService.getWeather(city: self.city, unit: settings?.unit.apiParam ?? "metric") { weather in
             if let weather = weather {
                 self.weather = weather
             }
