@@ -11,7 +11,7 @@ import SwiftUI
 struct Anytime_WeatherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SearchView()
                 .preferredColorScheme(.dark)
                 .environmentObject(AppSettings())
         }

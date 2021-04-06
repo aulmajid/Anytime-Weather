@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SearchView.swift
 //  Anytime Weather
 //
 //  Created by aku pintar indonesia on 05/04/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SearchView: View {
     
     @State var showSettings = false
     @State var showMaps = false
@@ -127,8 +127,8 @@ struct KeywordCell: View {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SearchView()
     }
 }
