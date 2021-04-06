@@ -34,6 +34,7 @@ struct ContentView: View {
                     HStack {
                         
                         TextField("Enter city", text: self.$keyword)
+                            .foregroundColor(.color6)
                             .padding()
                         
                         Spacer()
