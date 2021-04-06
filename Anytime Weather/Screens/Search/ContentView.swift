@@ -60,7 +60,7 @@ struct ContentView: View {
                 .padding()
             }
             .navigationBarTitle("Anytime Weather")
-            .background(NavigationLink(destination: Text("Destination"), isActive: $settingsButtonActive) {})
+            .background(NavigationLink(destination: SettingsView(), isActive: $settingsButtonActive) {})
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {

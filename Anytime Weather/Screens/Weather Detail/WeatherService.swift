@@ -10,7 +10,7 @@ import Alamofire
 class WeatherService {
     
     func getWeather(city: String, completion: @escaping ((Weather?) -> ())) {
-        AF.request("https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(TokenConstants.openweathermap)").responseDecodable(of: Weather.self) { response in
+        AF.request("https://api.openweathermap.org/data/2.5/weather?q=\(city)&units=\("metric")&appid=\(TokenConstants.openweathermap)").responseDecodable(of: Weather.self) { response in
             debugPrint(response)
             switch response.result {
             case .success(let weather):

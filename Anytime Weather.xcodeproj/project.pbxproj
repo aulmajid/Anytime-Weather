@@ -20,6 +20,7 @@
 		D925B0AF261BC7FB00205E0D /* TokenConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0AE261BC7FA00205E0D /* TokenConstants.swift */; };
 		D925B0B5261BCCCD00205E0D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0B4261BCCCD00205E0D /* SettingsView.swift */; };
 		D925B0B9261BD57300205E0D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0B8261BD57300205E0D /* View.swift */; };
+		D925B0C0261BEF7100205E0D /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0BF261BEF7100205E0D /* Unit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D925B0AE261BC7FA00205E0D /* TokenConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenConstants.swift; sourceTree = "<group>"; };
 		D925B0B4261BCCCD00205E0D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D925B0B8261BD57300205E0D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		D925B0BF261BEF7100205E0D /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				D925B0B4261BCCCD00205E0D /* SettingsView.swift */,
+				D925B0BF261BEF7100205E0D /* Unit.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				D925B093261B100F00205E0D /* Color.swift in Sources */,
 				D925B0B5261BCCCD00205E0D /* SettingsView.swift in Sources */,
 				D925B05D261AE6DD00205E0D /* ContentView.swift in Sources */,
+				D925B0C0261BEF7100205E0D /* Unit.swift in Sources */,
 				D925B0A3261B452C00205E0D /* WeatherService.swift in Sources */,
 				D925B05B261AE6DD00205E0D /* Anytime_WeatherApp.swift in Sources */,
 				D925B0A6261B4D4A00205E0D /* Weather.swift in Sources */,
