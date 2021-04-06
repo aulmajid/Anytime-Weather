@@ -26,7 +26,15 @@ struct WeatherDetailView: View {
         
         ZStack {
             
+            GeometryReader { geo in
+                    Image("bg1")
+                        .resizable()
+                        .aspectRatio(geo.size, contentMode: .fill)
+                        .edgesIgnoringSafeArea(.all)
+            }
+            
             Color.color6.edgesIgnoringSafeArea(.all)
+                .opacity(0.7)
             
             VStack(alignment: .center) {
                 
