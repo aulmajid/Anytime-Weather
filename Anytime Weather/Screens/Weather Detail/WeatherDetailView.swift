@@ -34,7 +34,7 @@ struct WeatherDetailView: View {
             }
             
             Color.color6.edgesIgnoringSafeArea(.all)
-                .opacity(0.7)
+                .opacity(0.6)
             
             VStack(alignment: .center) {
                 
