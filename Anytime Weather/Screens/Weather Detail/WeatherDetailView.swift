@@ -142,6 +142,11 @@ struct WeatherDetailView: View {
                 Button(action: {
                     showSettings = true
                 }) {
+                    Image(systemName: "arrow.down.doc")
+                }
+                Button(action: {
+                    showSettings = true
+                }) {
                     Image(systemName: "gearshape")
                 }
             }
