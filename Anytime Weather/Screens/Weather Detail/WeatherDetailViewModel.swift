@@ -13,6 +13,7 @@ class WeatherDetailViewModel: ObservableObject {
     
     @Published var weather = Weather()
     @Published var isLoading = false
+    @Published var timeRefresher = 0
     
     var city: String = ""
     var settings: AppSettings?
@@ -33,7 +34,7 @@ extension WeatherDetailViewModel {
     
     var time: String {
         let formatter = DateFormatter()
-        formatter.setLocalizedDateFormatFromTemplate("HH.mm")
+        formatter.setLocalizedDateFormatFromTemplate("HH.mm.ss")
         let data_HHmm = formatter.string(from: self.now)
         return "\(data_HHmm)"
     }
@@ -111,6 +112,10 @@ extension WeatherDetailViewModel {
     
     func fetchBackgroundImage() {
         self.backgroundImage = ["bg1", "bg2", "bg3", "bg4", "bg5", "bg6"].randomElement()!
+    }
+    
+    func refreshTime() {
+        self.timeRefresher = 0
     }
     
 }

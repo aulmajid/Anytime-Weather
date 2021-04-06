@@ -11,6 +11,12 @@ import AlertToast
 
 struct WeatherDetailView: View {
     
+    let timer = Timer.publish(
+            every: 1, // second
+            on: .main,
+            in: .common
+        ).autoconnect()
+    
     @State private var showSettings = false
     @State private var showToast = false
     @State private var showForecast = false
@@ -48,6 +54,9 @@ struct WeatherDetailView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
+                        .onReceive(timer) { _ in
+                            vm.refreshTime()
+                        }
                     
                     Text(vm.date)
                         .font(.title3)
