@@ -49,10 +49,12 @@ struct WeatherDetailView: View {
                 
                 Text(vm.condition)
                     .foregroundColor(.white)
+                    .italic()
                 
                 Text(vm.temp)
                     .font(.system(size: 110))
                     .foregroundColor(.white)
+                    .bold()
                 
                 Text(vm.feelsLike)
                     .foregroundColor(.white)
