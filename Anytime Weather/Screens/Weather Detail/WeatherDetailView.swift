@@ -103,7 +103,17 @@ struct WeatherDetailView: View {
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button(action: {
-                    DownloadUtils.download(url: vm.iconURL, fileName: vm.iconFileName, completion:{_ in })
+                    if let url = URL(string: vm.iconURL) {
+                        KingfisherManager.shared.retrieveImage(with: url) { result in
+                            switch result {
+                            case .success(let value):
+                                debugPrint(value)
+                                UIImageWriteToSavedPhotosAlbum(value.image, nil, nil, nil)
+                            case .failure(let error):
+                                debugPrint(error)
+                            }
+                        }
+                    }
                 }) {
                     Image(systemName: "tray.and.arrow.down")
                 }
