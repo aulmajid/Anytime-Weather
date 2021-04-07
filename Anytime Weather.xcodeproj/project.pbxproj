@@ -37,6 +37,7 @@
 		D9A2410B261D6B72005701D6 /* MockWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A2410A261D6B72005701D6 /* MockWeatherService.swift */; };
 		D9A24116261D7413005701D6 /* WeatherServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A24115261D7413005701D6 /* WeatherServiceProtocol.swift */; };
 		D9A24119261D7422005701D6 /* WeatherServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A24115261D7413005701D6 /* WeatherServiceProtocol.swift */; };
+		D9A2411D261D7AAA005701D6 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A2411C261D7AAA005701D6 /* WeatherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D9A240F6261D651C005701D6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D9A2410A261D6B72005701D6 /* MockWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherService.swift; sourceTree = "<group>"; };
 		D9A24115261D7413005701D6 /* WeatherServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceProtocol.swift; sourceTree = "<group>"; };
+		D9A2411C261D7AAA005701D6 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 				D9A24109261D6B58005701D6 /* Mocks */,
 				D9A240E0261D4490005701D6 /* Info.plist */,
 				D9A240F2261D488B005701D6 /* SearchTests.swift */,
+				D9A2411C261D7AAA005701D6 /* WeatherTests.swift */,
 			);
 			path = "Anytime Weather Tests";
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				D9A240FF261D6889005701D6 /* Unit.swift in Sources */,
 				D9A240E8261D45CD005701D6 /* SearchViewModel.swift in Sources */,
 				D9A240F3261D488B005701D6 /* SearchTests.swift in Sources */,
+				D9A2411D261D7AAA005701D6 /* WeatherTests.swift in Sources */,
 				D9A240FC261D6841005701D6 /* AppSettings.swift in Sources */,
 				D9A24102261D68AA005701D6 /* Weather.swift in Sources */,
 				D9A24119261D7422005701D6 /* WeatherServiceProtocol.swift in Sources */,
