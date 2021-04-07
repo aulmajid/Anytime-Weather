@@ -1,1 +1,1 @@
-<img align="left" width="100" height="100" src="Screenshots/SS_launch.png">
+<img align="left" width="337.5" height="730.8" src="Screenshots/SS_launch.png"><img align="center" width="337.5" height="730.8" src="Screenshots/SS_launch.png">
