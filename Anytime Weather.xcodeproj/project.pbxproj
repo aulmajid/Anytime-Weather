@@ -26,7 +26,20 @@
 		D925B127261C6C2700205E0D /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B126261C6C2700205E0D /* MapsView.swift */; };
 		D925B12C261C78B400205E0D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12B261C78B400205E0D /* SearchViewModel.swift */; };
 		D925B12F261C7AE000205E0D /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12E261C7AE000205E0D /* Keyword.swift */; };
+		D9A240DF261D4490005701D6 /* Anytime_Weather_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A240DE261D4490005701D6 /* Anytime_Weather_Tests.swift */; };
+		D9A240E8261D45CD005701D6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12B261C78B400205E0D /* SearchViewModel.swift */; };
+		D9A240EB261D4686005701D6 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12E261C7AE000205E0D /* Keyword.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9A240E1261D4490005701D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D925B04F261AE6DD00205E0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D925B056261AE6DD00205E0D;
+			remoteInfo = "Anytime Weather";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		50119A3A4470A1E94D749066 /* Pods-Anytime Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anytime Weather.debug.xcconfig"; path = "Target Support Files/Pods-Anytime Weather/Pods-Anytime Weather.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +65,9 @@
 		D925B126261C6C2700205E0D /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
 		D925B12B261C78B400205E0D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		D925B12E261C7AE000205E0D /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
+		D9A240DC261D4490005701D6 /* Anytime Weather Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anytime Weather Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9A240DE261D4490005701D6 /* Anytime_Weather_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anytime_Weather_Tests.swift; sourceTree = "<group>"; };
+		D9A240E0261D4490005701D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6CE47D6EE3F54C7F690C331 /* Pods_Anytime_Weather.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9A240D9261D4490005701D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				D925B059261AE6DD00205E0D /* Anytime Weather */,
+				D9A240DD261D4490005701D6 /* Anytime Weather Tests */,
 				D925B058261AE6DD00205E0D /* Products */,
 				26A0F199AC24B201D801F784 /* Pods */,
 				CB237EB5CADC114477BE2D12 /* Frameworks */,
@@ -97,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				D925B057261AE6DD00205E0D /* Anytime Weather.app */,
+				D9A240DC261D4490005701D6 /* Anytime Weather Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +216,15 @@
 			path = "Maps Location";
 			sourceTree = "<group>";
 		};
+		D9A240DD261D4490005701D6 /* Anytime Weather Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D9A240DE261D4490005701D6 /* Anytime_Weather_Tests.swift */,
+				D9A240E0261D4490005701D6 /* Info.plist */,
+			);
+			path = "Anytime Weather Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,6 +247,24 @@
 			productReference = D925B057261AE6DD00205E0D /* Anytime Weather.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D9A240DB261D4490005701D6 /* Anytime Weather Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9A240E5261D4490005701D6 /* Build configuration list for PBXNativeTarget "Anytime Weather Tests" */;
+			buildPhases = (
+				D9A240D8261D4490005701D6 /* Sources */,
+				D9A240D9261D4490005701D6 /* Frameworks */,
+				D9A240DA261D4490005701D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9A240E2261D4490005701D6 /* PBXTargetDependency */,
+			);
+			name = "Anytime Weather Tests";
+			productName = "Anytime Weather Tests";
+			productReference = D9A240DC261D4490005701D6 /* Anytime Weather Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -224,6 +276,10 @@
 				TargetAttributes = {
 					D925B056261AE6DD00205E0D = {
 						CreatedOnToolsVersion = 12.0.1;
+					};
+					D9A240DB261D4490005701D6 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = D925B056261AE6DD00205E0D;
 					};
 				};
 			};
@@ -241,6 +297,7 @@
 			projectRoot = "";
 			targets = (
 				D925B056261AE6DD00205E0D /* Anytime Weather */,
+				D9A240DB261D4490005701D6 /* Anytime Weather Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +309,13 @@
 			files = (
 				D925B062261AE6E200205E0D /* Preview Assets.xcassets in Resources */,
 				D925B05F261AE6E200205E0D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9A240DA261D4490005701D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +387,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9A240D8261D4490005701D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9A240E8261D45CD005701D6 /* SearchViewModel.swift in Sources */,
+				D9A240EB261D4686005701D6 /* Keyword.swift in Sources */,
+				D9A240DF261D4490005701D6 /* Anytime_Weather_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9A240E2261D4490005701D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D925B056261AE6DD00205E0D /* Anytime Weather */;
+			targetProxy = D9A240E1261D4490005701D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D925B064261AE6E200205E0D /* Debug */ = {
@@ -488,6 +570,46 @@
 			};
 			name = Release;
 		};
+		D9A240E3261D4490005701D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S49G677PMU;
+				INFOPLIST_FILE = "Anytime Weather Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aulmajid.Anytime-Weather-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anytime Weather.app/Anytime Weather";
+			};
+			name = Debug;
+		};
+		D9A240E4261D4490005701D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S49G677PMU;
+				INFOPLIST_FILE = "Anytime Weather Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aulmajid.Anytime-Weather-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anytime Weather.app/Anytime Weather";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -505,6 +627,15 @@
 			buildConfigurations = (
 				D925B067261AE6E200205E0D /* Debug */,
 				D925B068261AE6E200205E0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9A240E5261D4490005701D6 /* Build configuration list for PBXNativeTarget "Anytime Weather Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9A240E3261D4490005701D6 /* Debug */,
+				D9A240E4261D4490005701D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
