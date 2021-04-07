@@ -1,1 +1,1 @@
-![](Screenshots/SS_launch.png){:height="10%" width="10%"}
+<img align="left" width="100" height="100" src="creenshots/SS_launch.png">
