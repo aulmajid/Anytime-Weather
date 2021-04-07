@@ -6,7 +6,7 @@ Simple weather app built using:
  - **Swift** 5
  - **SwiftUI**
  - **OpenWeatherMap API**
- (Unit testing included)
+ - **Unit testing included**
 
 
 **Screenshots:**
