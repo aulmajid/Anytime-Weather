@@ -1,1 +1,3 @@
-<img width="281.25" height="609" src="Screenshots/SS_launch.png">  <img width="281.25" height="609" src="Screenshots/SS_launch.png">   <img width="281.25" height="609" src="Screenshots/SS_launch.png"> 
+<img width="281.25" height="609" src="Screenshots/SS_launch.png">  <img width="281.25" height="609" src="Screenshots/SS_search_history.png">   <img width="281.25" height="609" src="Screenshots/SS_search_suggestions.png">  
+<img width="281.25" height="609" src="Screenshots/SS_weather_surabaya.png">  <img width="281.25" height="609" src="Screenshots/SS_weather_auckland.png.png">   <img width="281.25" height="609" src="Screenshots/SS_weather_tokyo.png">  
+<img width="281.25" height="609" src="Screenshots/SS_settings.png">  <img width="281.25" height="609" src="Screenshots/SS_image_download.png">   <img width="281.25" height="609" src="Screenshots/SS_forecast.png">  
