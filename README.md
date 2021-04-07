@@ -1,1 +1,1 @@
-![](Screenshots/SS_launch.png | width=100)
+![](Screenshots/SS_launch.png)
