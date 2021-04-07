@@ -22,7 +22,7 @@ struct WeatherDetailView: View {
     @State private var showForecast = false
     
     @EnvironmentObject private var settings: AppSettings
-    @ObservedObject private var vm = WeatherDetailViewModel()
+    @ObservedObject private var vm = WeatherDetailViewModel(weatherService: WeatherService())
     
     init(city: String) {
         vm.city = city

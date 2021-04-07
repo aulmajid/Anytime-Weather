@@ -29,5 +29,17 @@ class SearchTests: XCTestCase {
             XCTAssertEqual(keyword.isHistory, false)
         }
     }
+    
+    func test_TemperatureSuffix() {
+        let settings = AppSettings()
+        let vm = WeatherDetailViewModel(weatherService: MockWeatherService())
+        vm.settings = settings
+        
+        settings.unit = Unit.celcius
+        XCTAssertEqual(vm.suffix, "°C")
+        
+        settings.unit = Unit.fahrenheit
+        XCTAssertEqual(vm.suffix, "°F")
+    }
 
 }

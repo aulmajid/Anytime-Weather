@@ -9,7 +9,7 @@ import Foundation
 
 class WeatherDetailViewModel: ObservableObject {
     
-    private let weatherService = WeatherService()
+    private let weatherService: WeatherServiceProtocol
     
     @Published var weather = Weather()
     @Published var isLoading = false
@@ -19,11 +19,15 @@ class WeatherDetailViewModel: ObservableObject {
     var settings: AppSettings?
     var backgroundImage = ""
     
+    init(weatherService: WeatherServiceProtocol) {
+        self.weatherService = weatherService
+    }
+    
 }
 
 extension WeatherDetailViewModel {
     
-    private var suffix: String {
+    var suffix: String {
         settings?.unit.suffix ?? ""
     }
     
