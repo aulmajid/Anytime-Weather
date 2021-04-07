@@ -30,6 +30,7 @@
 		D9A240E8261D45CD005701D6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12B261C78B400205E0D /* SearchViewModel.swift */; };
 		D9A240EB261D4686005701D6 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12E261C7AE000205E0D /* Keyword.swift */; };
 		D9A240F3261D488B005701D6 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A240F2261D488B005701D6 /* SearchTests.swift */; };
+		D9A240F7261D651C005701D6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A240F6261D651C005701D6 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		D9A240DE261D4490005701D6 /* Anytime_Weather_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anytime_Weather_Tests.swift; sourceTree = "<group>"; };
 		D9A240E0261D4490005701D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A240F2261D488B005701D6 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
+		D9A240F6261D651C005701D6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				D925B092261B100F00205E0D /* Color.swift */,
 				D925B0B8261BD57300205E0D /* View.swift */,
+				D9A240F6261D651C005701D6 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				D925B0A3261B452C00205E0D /* WeatherService.swift in Sources */,
 				D925B05B261AE6DD00205E0D /* Anytime_WeatherApp.swift in Sources */,
 				D925B121261C627100205E0D /* ForecastView.swift in Sources */,
+				D9A240F7261D651C005701D6 /* String.swift in Sources */,
 				D925B0A6261B4D4A00205E0D /* Weather.swift in Sources */,
 				D925B0AF261BC7FB00205E0D /* TokenConstants.swift in Sources */,
 			);

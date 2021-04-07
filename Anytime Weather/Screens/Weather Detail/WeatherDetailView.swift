@@ -64,7 +64,15 @@ struct WeatherDetailView: View {
                         .multilineTextAlignment(.center)
                         .padding(.bottom)
                     
-                    KFImage.url(URL(string: vm.iconURL))
+//                    KFImage.url(URL(string: vm.iconURL))
+//                        .loadDiskFileSynchronously()
+//                        .cacheMemoryOnly()
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 200, height: 100)
+//                        .foregroundColor(.white)
+                    
+                    Image(uiImage: vm.iconURL.toImage())
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 100)
