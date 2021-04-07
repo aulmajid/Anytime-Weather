@@ -29,6 +29,7 @@
 		D9A240DF261D4490005701D6 /* Anytime_Weather_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A240DE261D4490005701D6 /* Anytime_Weather_Tests.swift */; };
 		D9A240E8261D45CD005701D6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12B261C78B400205E0D /* SearchViewModel.swift */; };
 		D9A240EB261D4686005701D6 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12E261C7AE000205E0D /* Keyword.swift */; };
+		D9A240F3261D488B005701D6 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A240F2261D488B005701D6 /* SearchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		D9A240DC261D4490005701D6 /* Anytime Weather Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anytime Weather Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A240DE261D4490005701D6 /* Anytime_Weather_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anytime_Weather_Tests.swift; sourceTree = "<group>"; };
 		D9A240E0261D4490005701D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9A240F2261D488B005701D6 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 			children = (
 				D9A240DE261D4490005701D6 /* Anytime_Weather_Tests.swift */,
 				D9A240E0261D4490005701D6 /* Info.plist */,
+				D9A240F2261D488B005701D6 /* SearchTests.swift */,
 			);
 			path = "Anytime Weather Tests";
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9A240E8261D45CD005701D6 /* SearchViewModel.swift in Sources */,
+				D9A240F3261D488B005701D6 /* SearchTests.swift in Sources */,
 				D9A240EB261D4686005701D6 /* Keyword.swift in Sources */,
 				D9A240DF261D4490005701D6 /* Anytime_Weather_Tests.swift in Sources */,
 			);
