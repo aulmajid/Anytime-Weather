@@ -27,13 +27,13 @@ class WeatherTests: XCTestCase {
         XCTAssertEqual(self.vm.suffix, "°F")
     }
     
-    func test_cityAvailable() {
+    func test_CityAvailable() {
         self.vm.city = "Surabaya"
         self.vm.fetchWeather()
         XCTAssertNotNil(vm.weather.main)
     }
     
-    func test_cityNotFound() {
+    func test_CityNotFound() {
         self.vm.city = "Lautan"
         self.vm.fetchWeather()
         XCTAssertNil(vm.weather.main)

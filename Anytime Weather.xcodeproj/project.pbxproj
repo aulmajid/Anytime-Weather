@@ -142,6 +142,7 @@
 		D925B059261AE6DD00205E0D /* Anytime Weather */ = {
 			isa = PBXGroup;
 			children = (
+				D9A24120261D7F15005701D6 /* Models */,
 				D925B05A261AE6DD00205E0D /* Anytime_WeatherApp.swift */,
 				D925B05E261AE6E200205E0D /* Assets.xcassets */,
 				D925B091261B100100205E0D /* Extensions */,
@@ -188,7 +189,6 @@
 			children = (
 				D925B05C261AE6DD00205E0D /* SearchView.swift */,
 				D925B12B261C78B400205E0D /* SearchViewModel.swift */,
-				D925B12E261C7AE000205E0D /* Keyword.swift */,
 			);
 			path = "Search Location";
 			sourceTree = "<group>";
@@ -196,7 +196,6 @@
 		D925B098261B41E800205E0D /* Weather Detail */ = {
 			isa = PBXGroup;
 			children = (
-				D925B0A5261B4D4A00205E0D /* Weather.swift */,
 				D925B06C261AEFCE00205E0D /* WeatherDetailView.swift */,
 				D925B099261B41FE00205E0D /* WeatherDetailViewModel.swift */,
 				D925B0A2261B452C00205E0D /* WeatherService.swift */,
@@ -209,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				D925B0B4261BCCCD00205E0D /* SettingsView.swift */,
-				D925B0BF261BEF7100205E0D /* Unit.swift */,
 				D925B0C5261BFC1D00205E0D /* AppSettings.swift */,
 			);
 			path = Settings;
@@ -248,6 +246,16 @@
 				D9A2410A261D6B72005701D6 /* MockWeatherService.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D9A24120261D7F15005701D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D925B12E261C7AE000205E0D /* Keyword.swift */,
+				D925B0BF261BEF7100205E0D /* Unit.swift */,
+				D925B0A5261B4D4A00205E0D /* Weather.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -104,10 +104,6 @@ struct WeatherDetailView: View {
                     }) {
                         HStack {
                             
-                            //                        ProgressView(value: 100, total: 100)
-                            //                            .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
-                            //                            .animation(.none)
-                            
                             Image(systemName: "arrow.triangle.2.circlepath")
                                 .resizable()
                                 .scaledToFit()
