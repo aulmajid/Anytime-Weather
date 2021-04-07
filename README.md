@@ -1,1 +1,1 @@
-![](Screenshots/SS_launch.png)
+![](Screenshots/SS_launch.png){:height="10%" width="10%"}
