@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B508EC552C679A3900EB0236 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B508EC542C679A3900EB0236 /* Alamofire */; };
+		B508EC582C679A7F00EB0236 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B508EC572C679A7F00EB0236 /* Kingfisher */; };
+		B508EC5B2C679AB200EB0236 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = B508EC5A2C679AB200EB0236 /* AlertToast */; };
 		B566B9DA2C678ADB0062FD5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B061261AE6E200205E0D /* Preview Assets.xcassets */; };
 		B566B9DB2C678AE90062FD5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B05E261AE6E200205E0D /* Assets.xcassets */; };
 		D925B05B261AE6DD00205E0D /* AnytimeWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B05A261AE6DD00205E0D /* AnytimeWeatherApp.swift */; };
@@ -59,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B508EC5B2C679AB200EB0236 /* AlertToast in Frameworks */,
+				B508EC582C679A7F00EB0236 /* Kingfisher in Frameworks */,
+				B508EC552C679A3900EB0236 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +211,11 @@
 			dependencies = (
 			);
 			name = AnytimeWeather;
+			packageProductDependencies = (
+				B508EC542C679A3900EB0236 /* Alamofire */,
+				B508EC572C679A7F00EB0236 /* Kingfisher */,
+				B508EC5A2C679AB200EB0236 /* AlertToast */,
+			);
 			productName = AnytimeWeather;
 			productReference = D925B057261AE6DD00205E0D /* AnytimeWeather.app */;
 			productType = "com.apple.product-type.application";
@@ -232,6 +243,11 @@
 				Base,
 			);
 			mainGroup = D925B04E261AE6DD00205E0D;
+			packageReferences = (
+				B508EC532C679A3900EB0236 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B508EC562C679A7F00EB0236 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B508EC592C679AB200EB0236 /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
 			productRefGroup = D925B058261AE6DD00205E0D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -408,6 +424,7 @@
 				DEVELOPMENT_TEAM = N42FPZ35WB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AnytimeWeather/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AnytimeWeather;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -430,6 +447,7 @@
 				DEVELOPMENT_TEAM = N42FPZ35WB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AnytimeWeather/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AnytimeWeather;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,6 +482,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B508EC532C679A3900EB0236 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		B508EC562C679A7F00EB0236 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+		B508EC592C679AB200EB0236 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B508EC542C679A3900EB0236 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B508EC532C679A3900EB0236 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B508EC572C679A7F00EB0236 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B508EC562C679A7F00EB0236 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		B508EC5A2C679AB200EB0236 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B508EC592C679AB200EB0236 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D925B04F261AE6DD00205E0D /* Project object */;
 }
