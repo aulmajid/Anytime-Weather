@@ -1,5 +1,5 @@
 //
-//  Anytime_WeatherApp.swift
+//  AnytimeWeatherApp.swift
 //  Anytime Weather
 //
 //  Created by aku pintar indonesia on 05/04/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Anytime_WeatherApp: App {
+struct AnytimeWeatherApp: App {
     var body: some Scene {
         WindowGroup {
             SearchView()
