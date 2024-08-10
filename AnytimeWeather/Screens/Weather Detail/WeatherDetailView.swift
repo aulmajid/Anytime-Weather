@@ -2,7 +2,7 @@
 //  WeatherDetailView.swift
 //  Anytime Weather
 //
-//  Created by aku pintar indonesia on 05/04/21.
+//  Created by Ilham AM on 05/04/21.
 //
 
 import SwiftUI

@@ -2,7 +2,7 @@
 //  SettingsView.swift
 //  Anytime Weather
 //
-//  Created by aku pintar indonesia on 06/04/21.
+//  Created by Ilham AM on 06/04/21.
 //
 
 import SwiftUI
