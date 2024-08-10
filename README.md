@@ -1,4 +1,4 @@
-## **Anytime Weather**
+## **AnytimeWeather**
 
 
 Simple weather app built using:

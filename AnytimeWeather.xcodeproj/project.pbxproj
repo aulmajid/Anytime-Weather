@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B566B9DA2C678ADB0062FD5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B061261AE6E200205E0D /* Preview Assets.xcassets */; };
+		B566B9DB2C678AE90062FD5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B05E261AE6E200205E0D /* Assets.xcassets */; };
 		D925B05B261AE6DD00205E0D /* Anytime_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B05A261AE6DD00205E0D /* Anytime_WeatherApp.swift */; };
 		D925B05D261AE6DD00205E0D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B05C261AE6DD00205E0D /* SearchView.swift */; };
-		D925B05F261AE6E200205E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B05E261AE6E200205E0D /* Assets.xcassets */; };
-		D925B062261AE6E200205E0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B061261AE6E200205E0D /* Preview Assets.xcassets */; };
 		D925B06D261AEFCE00205E0D /* WeatherDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B06C261AEFCE00205E0D /* WeatherDetailView.swift */; };
 		D925B093261B100F00205E0D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B092261B100F00205E0D /* Color.swift */; };
 		D925B09A261B41FE00205E0D /* WeatherDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B099261B41FE00205E0D /* WeatherDetailViewModel.swift */; };
@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		5AE0276FA12784436BD3011D /* Pods_Anytime_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anytime_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D925B057261AE6DD00205E0D /* Anytime Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anytime Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D925B057261AE6DD00205E0D /* AnytimeWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnytimeWeather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D925B05A261AE6DD00205E0D /* Anytime_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anytime_WeatherApp.swift; sourceTree = "<group>"; };
 		D925B05C261AE6DD00205E0D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D925B05E261AE6E200205E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		D925B04E261AE6DD00205E0D = {
 			isa = PBXGroup;
 			children = (
-				D925B059261AE6DD00205E0D /* Anytime Weather */,
+				D925B059261AE6DD00205E0D /* AnytimeWeather */,
 				D925B058261AE6DD00205E0D /* Products */,
 				CB237EB5CADC114477BE2D12 /* Frameworks */,
 			);
@@ -86,12 +86,12 @@
 		D925B058261AE6DD00205E0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D925B057261AE6DD00205E0D /* Anytime Weather.app */,
+				D925B057261AE6DD00205E0D /* AnytimeWeather.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D925B059261AE6DD00205E0D /* Anytime Weather */ = {
+		D925B059261AE6DD00205E0D /* AnytimeWeather */ = {
 			isa = PBXGroup;
 			children = (
 				D9A24120261D7F15005701D6 /* Models */,
@@ -103,7 +103,7 @@
 				D925B06B261AEFB600205E0D /* Screens */,
 				D925B0AE261BC7FA00205E0D /* TokenConstants.swift */,
 			);
-			path = "Anytime Weather";
+			path = "AnytimeWeather";
 			sourceTree = "<group>";
 		};
 		D925B060261AE6E200205E0D /* Preview Content */ = {
@@ -194,9 +194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D925B056261AE6DD00205E0D /* Anytime Weather */ = {
+		D925B056261AE6DD00205E0D /* AnytimeWeather */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D925B066261AE6E200205E0D /* Build configuration list for PBXNativeTarget "Anytime Weather" */;
+			buildConfigurationList = D925B066261AE6E200205E0D /* Build configuration list for PBXNativeTarget "AnytimeWeather" */;
 			buildPhases = (
 				D925B053261AE6DD00205E0D /* Sources */,
 				D925B054261AE6DD00205E0D /* Frameworks */,
@@ -206,9 +206,9 @@
 			);
 			dependencies = (
 			);
-			name = "Anytime Weather";
-			productName = "Anytime Weather";
-			productReference = D925B057261AE6DD00205E0D /* Anytime Weather.app */;
+			name = "AnytimeWeather";
+			productName = "AnytimeWeather";
+			productReference = D925B057261AE6DD00205E0D /* AnytimeWeather.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -225,7 +225,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D925B052261AE6DD00205E0D /* Build configuration list for PBXProject "Anytime Weather" */;
+			buildConfigurationList = D925B052261AE6DD00205E0D /* Build configuration list for PBXProject "AnytimeWeather" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -238,7 +238,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D925B056261AE6DD00205E0D /* Anytime Weather */,
+				D925B056261AE6DD00205E0D /* AnytimeWeather */,
 			);
 		};
 /* End PBXProject section */
@@ -248,8 +248,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D925B062261AE6E200205E0D /* Preview Assets.xcassets in Resources */,
-				D925B05F261AE6E200205E0D /* Assets.xcassets in Resources */,
+				B566B9DB2C678AE90062FD5E /* Assets.xcassets in Resources */,
+				B566B9DA2C678ADB0062FD5E /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,10 +406,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Anytime Weather/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AnytimeWeather/Preview Content\"";
 				DEVELOPMENT_TEAM = N42FPZ35WB;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Anytime Weather/Info.plist";
+				INFOPLIST_FILE = "AnytimeWeather/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,10 +428,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Anytime Weather/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AnytimeWeather/Preview Content\"";
 				DEVELOPMENT_TEAM = N42FPZ35WB;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Anytime Weather/Info.plist";
+				INFOPLIST_FILE = "AnytimeWeather/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,7 +447,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D925B052261AE6DD00205E0D /* Build configuration list for PBXProject "Anytime Weather" */ = {
+		D925B052261AE6DD00205E0D /* Build configuration list for PBXProject "AnytimeWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D925B064261AE6E200205E0D /* Debug */,
@@ -456,7 +456,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D925B066261AE6E200205E0D /* Build configuration list for PBXNativeTarget "Anytime Weather" */ = {
+		D925B066261AE6E200205E0D /* Build configuration list for PBXNativeTarget "AnytimeWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D925B067261AE6E200205E0D /* Debug */,
