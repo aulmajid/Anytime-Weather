@@ -65,7 +65,7 @@ struct SearchView: View {
                 }
                 .padding()
             }
-            .navigationBarTitle("Anytime Weather")
+            .navigationBarTitle(Bundle.main.object(forInfoDictionaryKey: "CFBundleIdentifier") as! String)
             .background(NavigationLink(destination: SettingsView(), isActive: $showSettings) {})
             .background(NavigationLink(destination: MapsView(), isActive: $showMaps) {})
             .toolbar {

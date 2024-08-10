@@ -95,3 +95,6 @@ iOSInjectionProject/
 *.xccheckout
 *.xcscmblueprint
 *.xcuserstate.xcuserstate
+
+# Secrets
+*.secrets.xcconfig
