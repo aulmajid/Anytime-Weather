@@ -12,6 +12,7 @@
 		B508EC5B2C679AB200EB0236 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = B508EC5A2C679AB200EB0236 /* AlertToast */; };
 		B566B9DA2C678ADB0062FD5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B061261AE6E200205E0D /* Preview Assets.xcassets */; };
 		B566B9DB2C678AE90062FD5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B05E261AE6E200205E0D /* Assets.xcassets */; };
+		B5748DEB2C68C14400BF54D5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B5748DEA2C68C14400BF54D5 /* Localizable.xcstrings */; };
 		B59BCC202C67B69800B635D3 /* Dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B59BCC1F2C67B69800B635D3 /* Dev.xcconfig */; };
 		B59BCC232C67B7D000B635D3 /* Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B59BCC222C67B7D000B635D3 /* Prod.xcconfig */; };
 		B59BCC262C67C87F00B635D3 /* Dev.secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B59BCC252C67C87E00B635D3 /* Dev.secrets.xcconfig */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5748DEA2C68C14400BF54D5 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B59BCC1F2C67B69800B635D3 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		B59BCC222C67B7D000B635D3 /* Prod.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		B59BCC252C67C87E00B635D3 /* Dev.secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.secrets.xcconfig; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				D925B05E261AE6E200205E0D /* Assets.xcassets */,
+				B5748DEA2C68C14400BF54D5 /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = D925B04E261AE6DD00205E0D;
 			packageReferences = (
@@ -295,6 +299,7 @@
 				B59BCC282C67C8BE00B635D3 /* Prod.secrets.xcconfig in Resources */,
 				B59BCC262C67C87F00B635D3 /* Dev.secrets.xcconfig in Resources */,
 				B566B9DA2C678ADB0062FD5E /* Preview Assets.xcassets in Resources */,
+				B5748DEB2C68C14400BF54D5 /* Localizable.xcstrings in Resources */,
 				B59BCC202C67B69800B635D3 /* Dev.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

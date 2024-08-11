@@ -29,15 +29,15 @@ struct ForecastView: View {
                     .frame(height: 30)
                 
                 Picker("Tab", selection: $selectedIndex, content: {
-                    Text("Weekend").tag(0)
-                    Text("15 days").tag(1)
-                    Text("Month").tag(2)
+                    Text("forecast_tab_week").tag(0)
+                    Text("forecast_tab_15_days").tag(1)
+                    Text("forecast_tab_month").tag(2)
                 })
                 .pickerStyle(SegmentedPickerStyle())
                 
                 Spacer()
                 
-                Text("COMING\nSOON")
+                Text("coming_soon")
                     .font(.system(size: 50))
                     .foregroundColor(.color6)
                     .multilineTextAlignment(.center)

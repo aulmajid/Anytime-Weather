@@ -57,7 +57,8 @@ extension WeatherDetailViewModel {
         let formatter = DateFormatter()
         formatter.setLocalizedDateFormatFromTemplate("HH.mm")
         let data_HHmm = formatter.string(from: now)
-        return "Last updated: \(data_HHmm)"
+        let format = NSLocalizedString("last_updated %@", comment: "")
+        return String(format: format, data_HHmm)
     }
     
     var temp: String {
@@ -73,7 +74,8 @@ extension WeatherDetailViewModel {
     }
     
     var feelsLike: String {
-        "Feels like \(Int(weather.main?.feels_like ?? 0))" + suffix
+        let format = NSLocalizedString("feels_like %@", comment: "")
+        return String(format: format, "\(Int(weather.main?.feels_like ?? 0))" + suffix)
     }
     
     var pressure: String {

@@ -41,7 +41,7 @@ struct SearchView: View {
                     
                     HStack {
                         
-                        TextField("Enter city", text: self.$keyword)
+                        TextField("enter_city", text: self.$keyword)
                             .foregroundColor(.white)
                             .padding()
                         
@@ -65,7 +65,7 @@ struct SearchView: View {
                 }
                 .padding()
             }
-            .navigationBarTitle(Bundle.main.object(forInfoDictionaryKey: "CFBundleIdentifier") as! String)
+            .navigationBarTitle(Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as! String)
             .background(NavigationLink(destination: SettingsView(), isActive: $showSettings) {})
             .background(NavigationLink(destination: MapsView(), isActive: $showMaps) {})
             .toolbar {

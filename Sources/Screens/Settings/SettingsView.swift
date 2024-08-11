@@ -20,7 +20,7 @@ struct SettingsView: View {
             
             Form {
                 Section(header:
-                            Text("Select unit")
+                            Text("select_unit")
                             .foregroundColor(.white)
                             .bold()) {
                     

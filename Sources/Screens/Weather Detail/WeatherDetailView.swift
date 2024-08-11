@@ -90,10 +90,7 @@ struct WeatherDetailView: View {
                     Text(vm.feelsLike)
                         .foregroundColor(.white)
                     
-                    Text("Min :\t\t\t\(vm.minTemp)\n" +
-                            "Max :\t\t\(vm.maxTemp)\n" +
-                            "Pressure :\t\(vm.pressure)\n" +
-                            "Humidity :\t\(vm.humidity)")
+                    Text("additional_info \(vm.minTemp) \(vm.maxTemp) \(vm.pressure) \(vm.humidity)")
                         .font(.caption)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(.white)
@@ -124,7 +121,7 @@ struct WeatherDetailView: View {
                 Button(action: {
                     self.showForecast.toggle()
                 }) {
-                    Text("Show more forecast")
+                    Text("forecast_show_more")
                         .foregroundColor(.color6)
                 }.sheet(isPresented: self.$showForecast) {
                     ForecastView()

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MapsView: View {
     var body: some View {
-        Text("COMING\nSOON")
+        Text("coming_soon")
             .font(.system(size: 50))
             .foregroundColor(.color6)
             .multilineTextAlignment(.center)
