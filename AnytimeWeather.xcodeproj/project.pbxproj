@@ -109,11 +109,11 @@
 		D925B04E261AE6DD00205E0D = {
 			isa = PBXGroup;
 			children = (
-				B59BCC242C67B84200B635D3 /* Resources */,
 				B59BCC212C67B75200B635D3 /* Configurations */,
-				D925B059261AE6DD00205E0D /* AnytimeWeather */,
-				D925B058261AE6DD00205E0D /* Products */,
 				CB237EB5CADC114477BE2D12 /* Frameworks */,
+				D925B058261AE6DD00205E0D /* Products */,
+				B59BCC242C67B84200B635D3 /* Resources */,
+				D925B059261AE6DD00205E0D /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,7 +125,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D925B059261AE6DD00205E0D /* AnytimeWeather */ = {
+		D925B059261AE6DD00205E0D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				D9A24120261D7F15005701D6 /* Models */,
@@ -135,7 +135,7 @@
 				D925B06B261AEFB600205E0D /* Screens */,
 				D925B0AE261BC7FA00205E0D /* TokenConstants.swift */,
 			);
-			path = AnytimeWeather;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		D925B060261AE6E200205E0D /* Preview Content */ = {
@@ -455,7 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"AnytimeWeather/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Sources/Preview Content\"";
 				DEVELOPMENT_TEAM = N42FPZ35WB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Configurations/Info.plist;
@@ -479,7 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"AnytimeWeather/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Sources/Preview Content\"";
 				DEVELOPMENT_TEAM = N42FPZ35WB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Configurations/Info.plist;
