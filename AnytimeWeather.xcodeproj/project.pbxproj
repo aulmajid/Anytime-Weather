@@ -13,6 +13,7 @@
 		B566B9DA2C678ADB0062FD5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B061261AE6E200205E0D /* Preview Assets.xcassets */; };
 		B566B9DB2C678AE90062FD5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B05E261AE6E200205E0D /* Assets.xcassets */; };
 		B5748DEB2C68C14400BF54D5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B5748DEA2C68C14400BF54D5 /* Localizable.xcstrings */; };
+		B5748E0C2C68EED200BF54D5 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = B5748E0B2C68EED200BF54D5 /* RswiftLibrary */; };
 		B59BCC202C67B69800B635D3 /* Dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B59BCC1F2C67B69800B635D3 /* Dev.xcconfig */; };
 		B59BCC232C67B7D000B635D3 /* Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B59BCC222C67B7D000B635D3 /* Prod.xcconfig */; };
 		B59BCC262C67C87F00B635D3 /* Dev.secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B59BCC252C67C87E00B635D3 /* Dev.secrets.xcconfig */; };
@@ -73,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B508EC5B2C679AB200EB0236 /* AlertToast in Frameworks */,
+				B5748E0C2C68EED200BF54D5 /* RswiftLibrary in Frameworks */,
 				B508EC582C679A7F00EB0236 /* Kingfisher in Frameworks */,
 				B508EC552C679A3900EB0236 /* Alamofire in Frameworks */,
 			);
@@ -240,12 +242,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				B5748E0E2C68EEDD00BF54D5 /* PBXTargetDependency */,
 			);
 			name = AnytimeWeather;
 			packageProductDependencies = (
 				B508EC542C679A3900EB0236 /* Alamofire */,
 				B508EC572C679A7F00EB0236 /* Kingfisher */,
 				B508EC5A2C679AB200EB0236 /* AlertToast */,
+				B5748E0B2C68EED200BF54D5 /* RswiftLibrary */,
 			);
 			productName = AnytimeWeather;
 			productReference = D925B057261AE6DD00205E0D /* AnytimeWeather.app */;
@@ -279,6 +283,7 @@
 				B508EC532C679A3900EB0236 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B508EC562C679A7F00EB0236 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B508EC592C679AB200EB0236 /* XCRemoteSwiftPackageReference "AlertToast" */,
+				B5748E0A2C68EED200BF54D5 /* XCRemoteSwiftPackageReference "R" */,
 			);
 			productRefGroup = D925B058261AE6DD00205E0D /* Products */;
 			projectDirPath = "";
@@ -333,6 +338,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5748E0E2C68EEDD00BF54D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B5748E0D2C68EEDD00BF54D5 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D925B064261AE6E200205E0D /* Dev */ = {
@@ -549,6 +561,14 @@
 				minimumVersion = 1.3.9;
 			};
 		};
+		B5748E0A2C68EED200BF54D5 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -566,6 +586,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B508EC592C679AB200EB0236 /* XCRemoteSwiftPackageReference "AlertToast" */;
 			productName = AlertToast;
+		};
+		B5748E0B2C68EED200BF54D5 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5748E0A2C68EED200BF54D5 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		B5748E0D2C68EEDD00BF54D5 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5748E0A2C68EED200BF54D5 /* XCRemoteSwiftPackageReference "R" */;
+			productName = "plugin:RswiftGenerateInternalResources";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

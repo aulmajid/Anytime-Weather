@@ -28,7 +28,7 @@ struct SearchView: View {
             ZStack {
                 
                 GeometryReader { geo in
-                    Image("bg_search")
+                    Image(R.image.bg_search)
                         .resizable()
                         .aspectRatio(geo.size, contentMode: .fill)
                         .edgesIgnoringSafeArea(.all)
