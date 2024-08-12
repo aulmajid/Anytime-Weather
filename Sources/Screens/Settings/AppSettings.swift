@@ -8,7 +8,5 @@
 import Foundation
 
 class AppSettings: ObservableObject {
-    
-    @Published var unit: Unit = Unit.celcius
-    
+    @Published var unit: Unit = .celcius
 }

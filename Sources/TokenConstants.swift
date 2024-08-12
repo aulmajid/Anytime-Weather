@@ -7,8 +7,6 @@
 
 import Foundation
 
-struct TokenConstants {
-    
+enum TokenConstants {
     static let openweathermap = "7bbd9a7ad38be2e7af7f8d5d41689c8d"
-    
 }

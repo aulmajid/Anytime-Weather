@@ -8,18 +8,16 @@
 import Alamofire
 
 class WeatherService: WeatherServiceProtocol {
-    
-    func getWeather(city: String, unit: String, completion: @escaping ((Weather?) -> ())) {
+    func getWeather(city: String, unit: String, completion: @escaping ((Weather?) -> Void)) {
         AF.request("https://api.openweathermap.org/data/2.5/weather?q=\(city)&units=\(unit)&appid=\(TokenConstants.openweathermap)").responseDecodable(of: Weather.self) { response in
             debugPrint(response)
             switch response.result {
-            case .success(let weather):
+            case let .success(weather):
                 completion(weather)
-            case .failure(let error):
+            case let .failure(error):
                 debugPrint(error)
                 completion(nil)
             }
         }
     }
-    
 }

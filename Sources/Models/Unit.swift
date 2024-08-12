@@ -14,12 +14,10 @@ struct Unit: Hashable {
 }
 
 extension Unit {
-    
     static var celcius = Unit(name: "Celcius", suffix: "°C", apiParam: "metric")
     static var fahrenheit = Unit(name: "Fahrenheit", suffix: "°F", apiParam: "imperial")
-    
+
     static func all() -> [Unit] {
         return [celcius, fahrenheit]
     }
-    
 }

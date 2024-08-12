@@ -8,12 +8,10 @@
 import SwiftUI
 
 extension View {
-    
     @ViewBuilder func isHidden(_ shouldHide: Bool) -> some View {
         switch shouldHide {
-        case true: self.hidden()
+        case true: hidden()
         case false: self
         }
     }
-    
 }

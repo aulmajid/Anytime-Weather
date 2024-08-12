@@ -8,7 +8,6 @@
 import SwiftUI
 
 class SearchViewModel {
-    
     func getRecommendations(keyword: String) -> [Keyword] {
         if keyword.isEmpty {
             return Keyword.history()
@@ -16,5 +15,4 @@ class SearchViewModel {
             return Keyword.predict().map { Keyword(name: keyword + $0.name, isHistory: $0.isHistory) }
         }
     }
-    
 }

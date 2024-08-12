@@ -8,5 +8,5 @@
 import Foundation
 
 protocol WeatherServiceProtocol {
-    func getWeather(city: String, unit: String, completion: @escaping ((Weather?) -> ()))
+    func getWeather(city: String, unit: String, completion: @escaping ((Weather?) -> Void))
 }

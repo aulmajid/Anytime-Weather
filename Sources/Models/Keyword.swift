@@ -13,7 +13,6 @@ struct Keyword: Hashable {
 }
 
 extension Keyword {
-    
     static func history() -> [Keyword] {
         let a = Keyword(name: "Surabaya", isHistory: true)
         let b = Keyword(name: "Jakarta", isHistory: true)
@@ -24,7 +23,7 @@ extension Keyword {
         let g = Keyword(name: "London", isHistory: true)
         return [a, b, c, d, e, f, g]
     }
-    
+
     static func predict() -> [Keyword] {
         let a = Keyword(name: "", isHistory: false)
         let b = Keyword(name: "baya", isHistory: false)
@@ -35,5 +34,4 @@ extension Keyword {
         let g = Keyword(name: "land", isHistory: false)
         return [a, b, c, d, e, f, g]
     }
-    
 }
