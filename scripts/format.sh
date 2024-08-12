@@ -9,10 +9,8 @@ fi
 SWIFTFORMAT_PATH="${SRCROOT}/bin/swiftformat"
 
 # Check if SwiftFormat exists
-if [ ! -f "$SWIFTFORMAT_PATH" ]; then
-	echo -e "${ERROR}Error: SwiftFormat not found. Please run 'scripts/download-swiftformat.sh' to download it.${NC}"
-	exit 1
-fi
+source "$(dirname "$0")/check-tool.sh"
+check_tool "$SWIFTFORMAT_PATH" "SwiftFormat" "swiftformat"
 
 # Run SwiftFormat on the project
 echo "Running SwiftFormat..."

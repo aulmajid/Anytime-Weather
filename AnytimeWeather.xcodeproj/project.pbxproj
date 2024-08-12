@@ -235,7 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D925B066261AE6E200205E0D /* Build configuration list for PBXNativeTarget "AnytimeWeather" */;
 			buildPhases = (
-				386A28782C698EE00023A8E6 /* @ Run SwiftLint */,
+				386A28782C698EE00023A8E6 /* @ Run Linting using SwiftLint and SwiftFormat */,
 				D925B053261AE6DD00205E0D /* Sources */,
 				D925B054261AE6DD00205E0D /* Frameworks */,
 				D925B055261AE6DD00205E0D /* Resources */,
@@ -313,7 +313,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		386A28782C698EE00023A8E6 /* @ Run SwiftLint */ = {
+		386A28782C698EE00023A8E6 /* @ Run Linting using SwiftLint and SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -323,7 +323,7 @@
 			);
 			inputPaths = (
 			);
-			name = "@ Run SwiftLint";
+			name = "@ Run Linting using SwiftLint and SwiftFormat";
 			outputFileListPaths = (
 			);
 			outputPaths = (
