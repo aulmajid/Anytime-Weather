@@ -98,3 +98,6 @@ iOSInjectionProject/
 
 # Secrets
 *.secrets.xcconfig
+
+# Binaries
+/bin

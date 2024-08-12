@@ -235,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D925B066261AE6E200205E0D /* Build configuration list for PBXNativeTarget "AnytimeWeather" */;
 			buildPhases = (
+				386A28782C698EE00023A8E6 /* @ Run SwiftFormat */,
 				D925B053261AE6DD00205E0D /* Sources */,
 				D925B054261AE6DD00205E0D /* Frameworks */,
 				D925B055261AE6DD00205E0D /* Resources */,
@@ -310,6 +311,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		386A28782C698EE00023A8E6 /* @ Run SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "@ Run SwiftFormat";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/scripts/run-swiftformat.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D925B053261AE6DD00205E0D /* Sources */ = {
