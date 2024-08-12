@@ -14,10 +14,6 @@
 		B566B9DB2C678AE90062FD5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D925B05E261AE6E200205E0D /* Assets.xcassets */; };
 		B5748DEB2C68C14400BF54D5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B5748DEA2C68C14400BF54D5 /* Localizable.xcstrings */; };
 		B5748E0C2C68EED200BF54D5 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = B5748E0B2C68EED200BF54D5 /* RswiftLibrary */; };
-		B59BCC202C67B69800B635D3 /* Dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B59BCC1F2C67B69800B635D3 /* Dev.xcconfig */; };
-		B59BCC232C67B7D000B635D3 /* Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B59BCC222C67B7D000B635D3 /* Prod.xcconfig */; };
-		B59BCC262C67C87F00B635D3 /* Dev.secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B59BCC252C67C87E00B635D3 /* Dev.secrets.xcconfig */; };
-		B59BCC282C67C8BE00B635D3 /* Prod.secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B59BCC272C67C8BE00B635D3 /* Prod.secrets.xcconfig */; };
 		D925B05B261AE6DD00205E0D /* AnytimeWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B05A261AE6DD00205E0D /* AnytimeWeatherApp.swift */; };
 		D925B05D261AE6DD00205E0D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B05C261AE6DD00205E0D /* SearchView.swift */; };
 		D925B06D261AEFCE00205E0D /* WeatherDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B06C261AEFCE00205E0D /* WeatherDetailView.swift */; };
@@ -262,8 +258,9 @@
 		D925B04F261AE6DD00205E0D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					D925B056261AE6DD00205E0D = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -301,12 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B566B9DB2C678AE90062FD5E /* Assets.xcassets in Resources */,
-				B59BCC232C67B7D000B635D3 /* Prod.xcconfig in Resources */,
-				B59BCC282C67C8BE00B635D3 /* Prod.secrets.xcconfig in Resources */,
-				B59BCC262C67C87F00B635D3 /* Dev.secrets.xcconfig in Resources */,
 				B566B9DA2C678ADB0062FD5E /* Preview Assets.xcassets in Resources */,
 				B5748DEB2C68C14400BF54D5 /* Localizable.xcstrings in Resources */,
-				B59BCC202C67B69800B635D3 /* Dev.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +368,7 @@
 			baseConfigurationReference = B59BCC1F2C67B69800B635D3 /* Dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -408,6 +402,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -437,6 +432,7 @@
 			baseConfigurationReference = B59BCC222C67B7D000B635D3 /* Prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -470,6 +466,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
