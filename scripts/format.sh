@@ -16,7 +16,7 @@ fi
 
 # Run SwiftFormat on the project
 echo "Running SwiftFormat..."
-"$SWIFTFORMAT_PATH" --swiftversion 5.0 "$SRCROOT"
+"$SWIFTFORMAT_PATH" "$SRCROOT"
 if [ $? -eq 0 ]; then
 	echo -e "${SUCCESS}SwiftFormat has finished formatting your code.${NC}"
 else
