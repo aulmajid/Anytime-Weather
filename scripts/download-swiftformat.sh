@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Source color definitions
+source "$(dirname "$0")/colors.sh"
+
 # Define the directory for the SwiftFormat binary
 BIN_DIR="./bin"
 SWIFTFORMAT_PATH="$BIN_DIR/swiftformat"
@@ -17,7 +20,7 @@ if [ ! -f "$SWIFTFORMAT_PATH" ]; then
 	unzip -o swiftformat.zip -d "$BIN_DIR"
 	rm swiftformat.zip
 	chmod +x "$SWIFTFORMAT_PATH"
-	echo "SwiftFormat has been downloaded in $BIN_DIR"
+	echo -e "${SUCCESS}SwiftFormat has been downloaded in $BIN_DIR${NC}"
 else
-	echo "SwiftFormat is already downloaded in $BIN_DIR"
+	echo -e "${SUCCESS}SwiftFormat is already downloaded in $BIN_DIR${NC}"
 fi
