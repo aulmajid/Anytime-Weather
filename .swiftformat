@@ -1,2 +1,3 @@
 --swiftversion 5.0
+--exclude Tests
 --disable unusedArguments
