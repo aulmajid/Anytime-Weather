@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Get the root directory of the git repository
+SRCROOT="$(git rev-parse --show-toplevel)"
+
+# Run the format script
+"$SRCROOT/scripts/format.sh"
+
+# Check if formatting was successful
+if [ $? -eq 0 ]; then
+    # Get list of staged Swift files
+    files=$(git diff --cached --name-only --diff-filter=ACMR "*.swift" | sed 's| |\\ |g')
+    
+    # Add back the formatted files to staging
+    echo "$files" | xargs git add
+else
+    echo "Formatting failed. Commit aborted."
+    exit 1
+fi
