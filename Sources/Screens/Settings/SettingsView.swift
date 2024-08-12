@@ -18,7 +18,8 @@ struct SettingsView: View {
             Form {
                 Section(header: Text("select_unit")
                     .foregroundColor(.white)
-                    .bold()) {
+                    .bold())
+                {
                     ForEach(units, id: \.self) { unit in
                         Button(action: {
                             self.settings.unit = unit
