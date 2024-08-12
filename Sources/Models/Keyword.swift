@@ -7,12 +7,18 @@
 
 import Foundation
 
+/// @mockable
+protocol KeywordProvider {
+    static func history() -> [Keyword]
+    static func predict() -> [Keyword]
+}
+
 struct Keyword: Hashable {
     var name: String
     var isHistory: Bool
 }
 
-extension Keyword {
+extension Keyword: KeywordProvider {
     static func history() -> [Keyword] {
         let a = Keyword(name: "Surabaya", isHistory: true)
         let b = Keyword(name: "Jakarta", isHistory: true)

@@ -5,14 +5,18 @@
 //  Created by Ilham AM on 06/04/21.
 //
 
-import SwiftUI
+struct SearchViewModel {
+    private let keywordProvider: KeywordProvider.Type
 
-class SearchViewModel {
+    init(keywordProvider: KeywordProvider.Type = Keyword.self) {
+        self.keywordProvider = keywordProvider
+    }
+
     func getRecommendations(keyword: String) -> [Keyword] {
         if keyword.isEmpty {
-            return Keyword.history()
+            return keywordProvider.history()
         } else {
-            return Keyword.predict().map { Keyword(name: keyword + $0.name, isHistory: $0.isHistory) }
+            return keywordProvider.predict().map { Keyword(name: keyword + $0.name, isHistory: $0.isHistory) }
         }
     }
 }
