@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# Check if SRCROOT is not set (indicating we are not in Xcode)
+# Source color definitions if SRCROOT is not set
 if [ -z "$SRCROOT" ]; then
-	# SRCROOT is not set, so we are not in Xcode; source colors.sh
 	source "$(dirname "$0")/colors.sh"
-	# Use the current directory if SRCROOT is not set
 	SRCROOT="$(pwd)"
 fi
 
@@ -23,4 +21,5 @@ if [ $? -eq 0 ]; then
 	echo -e "${SUCCESS}SwiftFormat has finished formatting your code.${NC}"
 else
 	echo -e "${ERROR}Error: SwiftFormat encountered issues.${NC}"
+	exit 1
 fi
