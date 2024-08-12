@@ -7,6 +7,11 @@
 
 import Alamofire
 
+/// @mockable
+protocol WeatherServiceProtocol {
+    func getWeather(city: String, unit: String, completion: @escaping ((WeatherDTO?) -> Void))
+}
+
 class WeatherService: WeatherServiceProtocol {
     func getWeather(city: String, unit: String, completion: @escaping ((WeatherDTO?) -> Void)) {
         AF.request("https://api.openweathermap.org/data/2.5/weather?q=\(city)&units=\(unit)&appid=\(TokenConstants.openweathermap)").responseDecodable(of: WeatherDTO.self) { response in

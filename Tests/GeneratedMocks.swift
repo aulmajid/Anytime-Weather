@@ -4,9 +4,27 @@
 
 
 
+import Alamofire
 import Foundation
 @testable import AnytimeWeather
 
+
+final class SearchViewModelProtocolMock: SearchViewModelProtocol {
+    init() { }
+
+
+    var getRecommendationsCallCount = 0
+    var getRecommendationsArgValues = [String]()
+    var getRecommendationsHandler: ((String) -> ([Keyword]))?
+    func getRecommendations(keyword: String) -> [Keyword] {
+        getRecommendationsCallCount += 1
+        getRecommendationsArgValues.append(keyword)
+        if let getRecommendationsHandler = getRecommendationsHandler {
+            return getRecommendationsHandler(keyword)
+        }
+        return [Keyword]()
+    }
+}
 
 final class KeywordProviderMock: KeywordProvider {
     init() { }
@@ -30,6 +48,23 @@ final class KeywordProviderMock: KeywordProvider {
             return predictHandler()
         }
         return [Keyword]()
+    }
+}
+
+final class WeatherServiceProtocolMock: WeatherServiceProtocol {
+    init() { }
+
+
+    var getWeatherCallCount = 0
+    var getWeatherArgValues = [(String, String)]()
+    var getWeatherHandler: ((String, String, @escaping ((WeatherDTO?) -> Void)) -> ())?
+    func getWeather(city: String, unit: String, completion: @escaping ((WeatherDTO?) -> Void))  {
+        getWeatherCallCount += 1
+        getWeatherArgValues.append((city, unit))
+        if let getWeatherHandler = getWeatherHandler {
+            getWeatherHandler(city, unit, completion)
+        }
+        
     }
 }
 

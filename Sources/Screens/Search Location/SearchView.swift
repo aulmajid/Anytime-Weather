@@ -13,7 +13,7 @@ struct SearchView: View {
 
     @State private var keyword = ""
 
-    private var vm = SearchViewModel()
+    private var vm: SearchViewModelProtocol = SearchViewModel()
 
     init() {
         UITableView.appearance().backgroundColor = .clear

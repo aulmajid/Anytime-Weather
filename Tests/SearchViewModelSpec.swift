@@ -11,7 +11,7 @@ import Nimble
 
 class SearchViewModelSpec: QuickSpec {
     override class func spec() {
-        var viewModel: SearchViewModel!
+        var viewModel: SearchViewModelProtocol!
         
         beforeEach {
             // Reset handlers before each test

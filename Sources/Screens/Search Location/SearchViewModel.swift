@@ -5,7 +5,12 @@
 //  Created by Ilham AM on 06/04/21.
 //
 
-struct SearchViewModel {
+/// @mockable
+protocol SearchViewModelProtocol {
+    func getRecommendations(keyword: String) -> [Keyword]
+}
+
+struct SearchViewModel: SearchViewModelProtocol {
     private let keywordProvider: KeywordProvider.Type
 
     init(keywordProvider: KeywordProvider.Type = Keyword.self) {

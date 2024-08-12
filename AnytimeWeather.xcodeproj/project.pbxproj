@@ -40,7 +40,6 @@
 		D925B12C261C78B400205E0D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12B261C78B400205E0D /* SearchViewModel.swift */; };
 		D925B12F261C7AE000205E0D /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B12E261C7AE000205E0D /* Keyword.swift */; };
 		D9A240F7261D651C005701D6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A240F6261D651C005701D6 /* String.swift */; };
-		D9A24116261D7413005701D6 /* WeatherServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A24115261D7413005701D6 /* WeatherServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,6 @@
 		D925B12B261C78B400205E0D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		D925B12E261C7AE000205E0D /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		D9A240F6261D651C005701D6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		D9A24115261D7413005701D6 /* WeatherServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,7 +226,6 @@
 				D925B06C261AEFCE00205E0D /* WeatherDetailView.swift */,
 				D925B099261B41FE00205E0D /* WeatherDetailViewModel.swift */,
 				D925B0A2261B452C00205E0D /* WeatherService.swift */,
-				D9A24115261D7413005701D6 /* WeatherServiceProtocol.swift */,
 			);
 			path = "Weather Detail";
 			sourceTree = "<group>";
@@ -431,7 +428,6 @@
 				D925B12C261C78B400205E0D /* SearchViewModel.swift in Sources */,
 				D925B06D261AEFCE00205E0D /* WeatherDetailView.swift in Sources */,
 				D925B09A261B41FE00205E0D /* WeatherDetailViewModel.swift in Sources */,
-				D9A24116261D7413005701D6 /* WeatherServiceProtocol.swift in Sources */,
 				D925B0B9261BD57300205E0D /* View.swift in Sources */,
 				D925B093261B100F00205E0D /* Color.swift in Sources */,
 				D925B0B5261BCCCD00205E0D /* SettingsView.swift in Sources */,
