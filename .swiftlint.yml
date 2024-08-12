@@ -1,0 +1,15 @@
+included:
+  - Sources
+
+force_cast: warning
+
+identifier_name:
+  min_length: 1
+  max_length:
+    warning: 30
+    error: 40
+  allowed_symbols: ["_"]
+
+line_length:
+  warning: 200
+  error: 300

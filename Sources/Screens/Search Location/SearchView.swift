@@ -57,21 +57,21 @@ struct SearchView: View {
                 }
                 .padding()
             }
-            .navigationBarTitle(Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as! String)
+            .navigationBarTitle(Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "")
             .background(NavigationLink(destination: SettingsView(), isActive: $showSettings) {})
             .background(NavigationLink(destination: MapsView(), isActive: $showMaps) {})
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
                         showMaps = true
-                    }) {
+                    }, label: {
                         Image(systemName: "map")
-                    }
+                    })
                     Button(action: {
                         showSettings = true
-                    }) {
+                    }, label: {
                         Image(systemName: "gearshape")
-                    }
+                    })
                 }
             }
         }

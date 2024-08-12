@@ -24,7 +24,7 @@
 		D925B093261B100F00205E0D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B092261B100F00205E0D /* Color.swift */; };
 		D925B09A261B41FE00205E0D /* WeatherDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B099261B41FE00205E0D /* WeatherDetailViewModel.swift */; };
 		D925B0A3261B452C00205E0D /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0A2261B452C00205E0D /* WeatherService.swift */; };
-		D925B0A6261B4D4A00205E0D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0A5261B4D4A00205E0D /* Weather.swift */; };
+		D925B0A6261B4D4A00205E0D /* WeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0A5261B4D4A00205E0D /* WeatherDTO.swift */; };
 		D925B0AF261BC7FB00205E0D /* TokenConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0AE261BC7FA00205E0D /* TokenConstants.swift */; };
 		D925B0B5261BCCCD00205E0D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0B4261BCCCD00205E0D /* SettingsView.swift */; };
 		D925B0B9261BD57300205E0D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925B0B8261BD57300205E0D /* View.swift */; };
@@ -54,7 +54,7 @@
 		D925B092261B100F00205E0D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D925B099261B41FE00205E0D /* WeatherDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewModel.swift; sourceTree = "<group>"; };
 		D925B0A2261B452C00205E0D /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
-		D925B0A5261B4D4A00205E0D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		D925B0A5261B4D4A00205E0D /* WeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDTO.swift; sourceTree = "<group>"; };
 		D925B0AE261BC7FA00205E0D /* TokenConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenConstants.swift; sourceTree = "<group>"; };
 		D925B0B4261BCCCD00205E0D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D925B0B8261BD57300205E0D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 			children = (
 				D925B12E261C7AE000205E0D /* Keyword.swift */,
 				D925B0BF261BEF7100205E0D /* Unit.swift */,
-				D925B0A5261B4D4A00205E0D /* Weather.swift */,
+				D925B0A5261B4D4A00205E0D /* WeatherDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D925B066261AE6E200205E0D /* Build configuration list for PBXNativeTarget "AnytimeWeather" */;
 			buildPhases = (
-				386A28782C698EE00023A8E6 /* @ Run SwiftFormat */,
+				386A28782C698EE00023A8E6 /* @ Run SwiftLint */,
 				D925B053261AE6DD00205E0D /* Sources */,
 				D925B054261AE6DD00205E0D /* Frameworks */,
 				D925B055261AE6DD00205E0D /* Resources */,
@@ -313,7 +313,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		386A28782C698EE00023A8E6 /* @ Run SwiftFormat */ = {
+		386A28782C698EE00023A8E6 /* @ Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -323,14 +323,14 @@
 			);
 			inputPaths = (
 			);
-			name = "@ Run SwiftFormat";
+			name = "@ Run SwiftLint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/scripts/run-swiftformat.sh\"\n";
+			shellScript = "\"${SRCROOT}/scripts/lint.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -355,7 +355,7 @@
 				D925B05B261AE6DD00205E0D /* AnytimeWeatherApp.swift in Sources */,
 				D925B121261C627100205E0D /* ForecastView.swift in Sources */,
 				D9A240F7261D651C005701D6 /* String.swift in Sources */,
-				D925B0A6261B4D4A00205E0D /* Weather.swift in Sources */,
+				D925B0A6261B4D4A00205E0D /* WeatherDTO.swift in Sources */,
 				D925B0AF261BC7FB00205E0D /* TokenConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,22 +16,19 @@ struct SettingsView: View {
             Color.color6.edgesIgnoringSafeArea(.all)
 
             Form {
-                Section(header:
-                    Text("select_unit")
-                        .foregroundColor(.white)
-                        .bold())
-                {
+                Section(header: Text("select_unit")
+                    .foregroundColor(.white)
+                    .bold()) {
                     ForEach(units, id: \.self) { unit in
-
                         Button(action: {
                             self.settings.unit = unit
-                        }) {
+                        }, label: {
                             UnitCell(unit: unit, isSelected: unit == self.settings.unit)
-                        }
+                        })
                     }
-
-                }.listRowBackground(Color.white)
-                    .accentColor(.white)
+                }
+                .listRowBackground(Color.white)
+                .accentColor(.white)
             }
         }
     }

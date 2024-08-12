@@ -10,7 +10,7 @@ import Foundation
 class WeatherDetailViewModel: ObservableObject {
     private let weatherService: WeatherServiceProtocol
 
-    @Published var weather = Weather()
+    @Published var weather = WeatherDTO()
     @Published var isLoading = false
     @Published var timeRefresher = 0
 

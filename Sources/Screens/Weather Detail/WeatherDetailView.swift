@@ -93,7 +93,7 @@ struct WeatherDetailView: View {
 
                     Button(action: {
                         vm.fetchWeather()
-                    }) {
+                    }, label: {
                         HStack {
                             Image(systemName: "arrow.triangle.2.circlepath")
                                 .resizable()
@@ -105,17 +105,17 @@ struct WeatherDetailView: View {
                                 .font(.caption)
                                 .foregroundColor(.white)
                         }
-                    }
+                    })
                 }
 
                 Spacer()
 
                 Button(action: {
                     self.showForecast.toggle()
-                }) {
+                }, label: {
                     Text("forecast_show_more")
                         .foregroundColor(.color6)
-                }.sheet(isPresented: self.$showForecast) {
+                }).sheet(isPresented: self.$showForecast) {
                     ForecastView()
                 }
                 .frame(width: 200, height: 36)
@@ -149,22 +149,22 @@ struct WeatherDetailView: View {
                             }
                         }
                     }
-                }) {
+                }, label: {
                     Image(systemName: "tray.and.arrow.down")
-                }
+                })
                 Button(action: {
                     if let image = UIImage(named: vm.backgroundImage) {
                         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
                         self.showToast.toggle()
                     }
-                }) {
+                }, label: {
                     Image(systemName: "arrow.down.doc")
-                }
+                })
                 Button(action: {
                     showSettings = true
-                }) {
+                }, label: {
                     Image(systemName: "gearshape")
-                }
+                })
             }
         }.toast(isPresenting: $showToast, duration: 2) {
             AlertToast(type: .complete(.color6), title: "Image Saved!")

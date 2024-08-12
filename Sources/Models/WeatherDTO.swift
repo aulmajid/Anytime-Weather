@@ -1,5 +1,5 @@
 //
-//  Weather.swift
+//  WeatherDTO.swift
 //  Anytime Weather
 //
 //  Created by Ilham AM on 05/04/21.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Weather: Decodable {
-    var main: Weather_main?
-    var weather: [Weather_weather]?
+struct WeatherDTO: Decodable {
+    var main: WeatherMain?
+    var weather: [Weather]?
     var timezone: Double?
 }
 
-struct Weather_main: Decodable {
+struct WeatherMain: Decodable {
     var temp: Double?
     var feels_like: Double?
     var temp_min: Double?
@@ -22,7 +22,7 @@ struct Weather_main: Decodable {
     var humidity: Int?
 }
 
-struct Weather_weather: Decodable {
+struct Weather: Decodable {
     var main: String?
     var description: String?
     var icon: String?
