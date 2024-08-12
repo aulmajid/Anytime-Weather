@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# Source color definitions
-source "$(dirname "$0")/colors.sh"
-
-# Define the directory for the SwiftFormat binary
+# Check if SRCROOT is not set (indicating we are not in Xcode)
 if [ -z "$SRCROOT" ]; then
-	# If SRCROOT is not set, use the current directory
+	# SRCROOT is not set, so we are not in Xcode; source colors.sh
+	source "$(dirname "$0")/colors.sh"
+	# Use the current directory if SRCROOT is not set
 	SRCROOT="$(pwd)"
 fi
 
