@@ -11,6 +11,7 @@
 		3888B0602C6A31C20089EFB0 /* SearchViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B05F2C6A31C20089EFB0 /* SearchViewModelSpec.swift */; };
 		3888B0642C6A32280089EFB0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 3888B0632C6A32280089EFB0 /* Quick */; };
 		3888B0672C6A32800089EFB0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 3888B0662C6A32800089EFB0 /* Nimble */; };
+		3888B06F2C6A4BDA0089EFB0 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B06E2C6A4BDA0089EFB0 /* GeneratedMocks.swift */; };
 		B508EC552C679A3900EB0236 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B508EC542C679A3900EB0236 /* Alamofire */; };
 		B508EC582C679A7F00EB0236 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B508EC572C679A7F00EB0236 /* Kingfisher */; };
 		B508EC5B2C679AB200EB0236 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = B508EC5A2C679AB200EB0236 /* AlertToast */; };
@@ -56,6 +57,7 @@
 		3888B0532C6A2F680089EFB0 /* AnytimeWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnytimeWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3888B05D2C6A30560089EFB0 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		3888B05F2C6A31C20089EFB0 /* SearchViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelSpec.swift; sourceTree = "<group>"; };
+		3888B06E2C6A4BDA0089EFB0 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		B5748DEA2C68C14400BF54D5 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B59BCC1F2C67B69800B635D3 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		B59BCC222C67B7D000B635D3 /* Prod.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		3888B0542C6A2F680089EFB0 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3888B06E2C6A4BDA0089EFB0 /* GeneratedMocks.swift */,
 				3888B05D2C6A30560089EFB0 /* SearchViewModelTests.swift */,
 				3888B05F2C6A31C20089EFB0 /* SearchViewModelSpec.swift */,
 			);
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3888B05E2C6A30560089EFB0 /* SearchViewModelTests.swift in Sources */,
+				3888B06F2C6A4BDA0089EFB0 /* GeneratedMocks.swift in Sources */,
 				3888B0602C6A31C20089EFB0 /* SearchViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
