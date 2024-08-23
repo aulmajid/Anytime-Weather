@@ -103,11 +103,46 @@ extension WeatherDetailViewModel {
 extension WeatherDetailViewModel {
     func fetchWeather() {
         isLoading = true
-        weatherService.getWeather(city: city, unit: settings?.unit.apiParam ?? "metric") { weather in
-            if let weather = weather {
-                self.weather = weather
+        let unit = settings?.unit.apiParam ?? "metric"
+        if #available(iOS 16.0, *) {
+            Task {
+                let result = await weatherService.getWeatherAsyncResult(city: city, unit: unit)
+                switch result {
+                case let .success(weather):
+                    self.weather = weather
+                    self.isLoading = true
+                case let .failure(error):
+                    print("Error: \(error)")
+                }
             }
-            self.isLoading = false
+        } else if #available(iOS 15.0, *) {
+            Task {
+                do {
+                    let weather = try await weatherService.getWeatherAsync(city: city, unit: unit)
+                    self.weather = weather
+                    self.isLoading = true
+                } catch {
+                    print("Error: \(error)")
+                }
+            }
+        } else if #available(iOS 13.0, *) {
+            let cancellable = weatherService.getWeatherFuture(city: city, unit: unit)
+                .sink(receiveCompletion: { completion in
+                    if case let .failure(error) = completion {
+                        print("Error: \(error)")
+                    }
+                }, receiveValue: { [weak self] weather in
+                    self?.weather = weather
+                    self?.isLoading = false
+                })
+
+        } else {
+            weatherService.getWeather(city: city, unit: unit) { [weak self] weather in
+                if let weather = weather {
+                    self?.weather = weather
+                }
+                self?.isLoading = false
+            }
         }
     }
 
